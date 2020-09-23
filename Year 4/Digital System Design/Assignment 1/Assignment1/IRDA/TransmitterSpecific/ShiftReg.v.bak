@@ -1,0 +1,31 @@
+module ShiftReg(Data, Load, Shift, TxD, clk, reset_n);
+	// Input for Clock and Reset, Always Needed
+	input clk;
+	input reset_n;
+	// Input for Data (width 7), Load and Shift
+	input [10:0] Data;
+	input Load, Shift;
+	// reg to hold Present and Next Value for cycled Data
+	reg [10:0] p_val, n_val;
+	//Parity must be reg to write data to it
+	output TxD;
+	reg TxD;
+	// Define states as parameters
+	parameter defVal = 11'b11111111111;
+	// functional logical things, define reset state and the next state
+	always @ (posedge clk, negedge reset_n)
+		if (reset_n == 0) 
+			p_val <= defVal;
+		else p_val <= n_val;
+
+	
+	always @ (Load, Shift)
+		begin
+			n_val = p_val;
+			TxD = p_val[0];
+			if (Load) 
+				n_val = Data;
+			else if (Shift == 1)
+				n_val = {1'b1, p_val[10:1] };
+		end
+endmodule

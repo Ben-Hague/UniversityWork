@@ -1,0 +1,624 @@
+Simulator report for UART
+Fri Nov 29 10:20:34 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 327 nodes    ;
+; Simulation Coverage         ;      56.00 % ;
+; Total Number of Transitions ; 941314       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                        ;
++--------------------------------------------------------------------------------------------+------------------------------+---------------+
+; Option                                                                                     ; Setting                      ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                   ; Timing        ;
+; Start time                                                                                 ; 0 ns                         ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                          ;               ;
+; Vector input source                                                                        ; M:/ELEC473/UART/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                           ; On            ;
+; Check outputs                                                                              ; Off                          ; Off           ;
+; Report simulation coverage                                                                 ; On                           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                           ; On            ;
+; Display missing 1-value coverage report                                                    ; On                           ; On            ;
+; Display missing 0-value coverage report                                                    ; On                           ; On            ;
+; Detect setup and hold time violations                                                      ; Off                          ; Off           ;
+; Detect glitches                                                                            ; Off                          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                          ; Off           ;
+; Generate Signal Activity File                                                              ; Off                          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                         ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      56.00 % ;
+; Total nodes checked                                 ; 327          ;
+; Total output ports checked                          ; 325          ;
+; Total output ports with complete 1/0-value coverage ; 182          ;
+; Total output ports with no 1/0-value coverage       ; 117          ;
+; Total output ports with no 1-value coverage         ; 117          ;
+; Total output ports with no 0-value coverage         ; 143          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                          ;
++-----------------------------------------+-----------------------------------------+------------------+
+; Node Name                               ; Output Port Name                        ; Output Port Type ;
++-----------------------------------------+-----------------------------------------+------------------+
+; |UART|Uart_TxD                          ; |UART|Uart_TxD                          ; pin_out          ;
+; |UART|CLOCK_50                          ; |UART|CLOCK_50                          ; out              ;
+; |UART|KEY[2]                            ; |UART|KEY[2]                            ; out              ;
+; |UART|BitCounter:inst12|pcount[2]       ; |UART|BitCounter:inst12|pcount[2]       ; regout           ;
+; |UART|BitCounter:inst12|pcount[1]       ; |UART|BitCounter:inst12|pcount[1]       ; regout           ;
+; |UART|BaudCounter:inst14|pcount[9]      ; |UART|BaudCounter:inst14|pcount[9]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[8]      ; |UART|BaudCounter:inst14|pcount[8]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[7]      ; |UART|BaudCounter:inst14|pcount[7]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[6]      ; |UART|BaudCounter:inst14|pcount[6]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[5]      ; |UART|BaudCounter:inst14|pcount[5]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[4]      ; |UART|BaudCounter:inst14|pcount[4]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[3]      ; |UART|BaudCounter:inst14|pcount[3]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[2]      ; |UART|BaudCounter:inst14|pcount[2]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[1]      ; |UART|BaudCounter:inst14|pcount[1]      ; regout           ;
+; |UART|BaudCounter:inst14|pcount[0]      ; |UART|BaudCounter:inst14|pcount[0]      ; regout           ;
+; |UART|BaudCounter:inst14|ncount[10]     ; |UART|BaudCounter:inst14|ncount[10]     ; out              ;
+; |UART|BaudCounter:inst14|ncount[9]      ; |UART|BaudCounter:inst14|ncount[9]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[8]      ; |UART|BaudCounter:inst14|ncount[8]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[7]      ; |UART|BaudCounter:inst14|ncount[7]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[6]      ; |UART|BaudCounter:inst14|ncount[6]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[5]      ; |UART|BaudCounter:inst14|ncount[5]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[4]      ; |UART|BaudCounter:inst14|ncount[4]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[3]      ; |UART|BaudCounter:inst14|ncount[3]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[2]      ; |UART|BaudCounter:inst14|ncount[2]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[1]      ; |UART|BaudCounter:inst14|ncount[1]      ; out              ;
+; |UART|BaudCounter:inst14|ncount[0]      ; |UART|BaudCounter:inst14|ncount[0]      ; out              ;
+; |UART|BaudCounter:inst13|pcount[10]     ; |UART|BaudCounter:inst13|pcount[10]     ; regout           ;
+; |UART|BaudCounter:inst13|pcount[9]      ; |UART|BaudCounter:inst13|pcount[9]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[8]      ; |UART|BaudCounter:inst13|pcount[8]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[7]      ; |UART|BaudCounter:inst13|pcount[7]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[6]      ; |UART|BaudCounter:inst13|pcount[6]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[5]      ; |UART|BaudCounter:inst13|pcount[5]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[4]      ; |UART|BaudCounter:inst13|pcount[4]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[3]      ; |UART|BaudCounter:inst13|pcount[3]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[2]      ; |UART|BaudCounter:inst13|pcount[2]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[1]      ; |UART|BaudCounter:inst13|pcount[1]      ; regout           ;
+; |UART|BaudCounter:inst13|pcount[0]      ; |UART|BaudCounter:inst13|pcount[0]      ; regout           ;
+; |UART|BaudCounter:inst13|ncount[10]     ; |UART|BaudCounter:inst13|ncount[10]     ; out              ;
+; |UART|BaudCounter:inst13|ncount[9]      ; |UART|BaudCounter:inst13|ncount[9]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[8]      ; |UART|BaudCounter:inst13|ncount[8]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[7]      ; |UART|BaudCounter:inst13|ncount[7]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[6]      ; |UART|BaudCounter:inst13|ncount[6]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[5]      ; |UART|BaudCounter:inst13|ncount[5]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[4]      ; |UART|BaudCounter:inst13|ncount[4]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[3]      ; |UART|BaudCounter:inst13|ncount[3]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[2]      ; |UART|BaudCounter:inst13|ncount[2]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[1]      ; |UART|BaudCounter:inst13|ncount[1]      ; out              ;
+; |UART|BaudCounter:inst13|ncount[0]      ; |UART|BaudCounter:inst13|ncount[0]      ; out              ;
+; |UART|ControllerReciever:inst1|nstate~3 ; |UART|ControllerReciever:inst1|nstate~3 ; out              ;
+; |UART|ControllerReciever:inst1|nstate~5 ; |UART|ControllerReciever:inst1|nstate~5 ; out              ;
+; |UART|ControllerReciever:inst1|pstate~0 ; |UART|ControllerReciever:inst1|pstate~0 ; out0             ;
+; |UART|ControllerReciever:inst1|pstate~5 ; |UART|ControllerReciever:inst1|pstate~5 ; out0             ;
+; |UART|debouncer:inst11|pstate.Wait      ; |UART|debouncer:inst11|pstate.Wait      ; regout           ;
+; |UART|debouncer:inst11|pstate.Hold      ; |UART|debouncer:inst11|pstate.Hold      ; regout           ;
+; |UART|debouncer:inst11|pstate.Pulse     ; |UART|debouncer:inst11|pstate.Pulse     ; regout           ;
+; |UART|debouncer:inst11|nstate~0         ; |UART|debouncer:inst11|nstate~0         ; out              ;
+; |UART|debouncer:inst11|nstate~1         ; |UART|debouncer:inst11|nstate~1         ; out              ;
+; |UART|debouncer:inst11|nstate~2         ; |UART|debouncer:inst11|nstate~2         ; out              ;
+; |UART|debouncer:inst11|nstate~3         ; |UART|debouncer:inst11|nstate~3         ; out              ;
+; |UART|debouncer:inst11|nstate~4         ; |UART|debouncer:inst11|nstate~4         ; out              ;
+; |UART|debouncer:inst11|nstate~5         ; |UART|debouncer:inst11|nstate~5         ; out              ;
+; |UART|debouncer:inst11|pstate~0         ; |UART|debouncer:inst11|pstate~0         ; out0             ;
+; |UART|debouncer:inst11|nstate~7         ; |UART|debouncer:inst11|nstate~7         ; out0             ;
+; |UART|debouncer:inst11|Send             ; |UART|debouncer:inst11|Send             ; out0             ;
+; |UART|debouncer:inst11|nstate~9         ; |UART|debouncer:inst11|nstate~9         ; out0             ;
+; |UART|debouncer:inst11|pstate~5         ; |UART|debouncer:inst11|pstate~5         ; out0             ;
+; |UART|BaudCounter:inst5|pcount[10]      ; |UART|BaudCounter:inst5|pcount[10]      ; regout           ;
+; |UART|BaudCounter:inst5|pcount[9]       ; |UART|BaudCounter:inst5|pcount[9]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[8]       ; |UART|BaudCounter:inst5|pcount[8]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[7]       ; |UART|BaudCounter:inst5|pcount[7]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[6]       ; |UART|BaudCounter:inst5|pcount[6]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[5]       ; |UART|BaudCounter:inst5|pcount[5]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[4]       ; |UART|BaudCounter:inst5|pcount[4]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[3]       ; |UART|BaudCounter:inst5|pcount[3]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[2]       ; |UART|BaudCounter:inst5|pcount[2]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[1]       ; |UART|BaudCounter:inst5|pcount[1]       ; regout           ;
+; |UART|BaudCounter:inst5|pcount[0]       ; |UART|BaudCounter:inst5|pcount[0]       ; regout           ;
+; |UART|BaudCounter:inst5|ncount[10]      ; |UART|BaudCounter:inst5|ncount[10]      ; out              ;
+; |UART|BaudCounter:inst5|ncount[9]       ; |UART|BaudCounter:inst5|ncount[9]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[8]       ; |UART|BaudCounter:inst5|ncount[8]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[7]       ; |UART|BaudCounter:inst5|ncount[7]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[6]       ; |UART|BaudCounter:inst5|ncount[6]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[5]       ; |UART|BaudCounter:inst5|ncount[5]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[4]       ; |UART|BaudCounter:inst5|ncount[4]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[3]       ; |UART|BaudCounter:inst5|ncount[3]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[2]       ; |UART|BaudCounter:inst5|ncount[2]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[1]       ; |UART|BaudCounter:inst5|ncount[1]       ; out              ;
+; |UART|BaudCounter:inst5|ncount[0]       ; |UART|BaudCounter:inst5|ncount[0]       ; out              ;
+; |UART|BitCounter:inst4|pcount[2]        ; |UART|BitCounter:inst4|pcount[2]        ; regout           ;
+; |UART|BitCounter:inst4|pcount[1]        ; |UART|BitCounter:inst4|pcount[1]        ; regout           ;
+; |UART|Controller:inst|pstate            ; |UART|Controller:inst|pstate            ; regout           ;
+; |UART|Controller:inst|nstate~0          ; |UART|Controller:inst|nstate~0          ; out              ;
+; |UART|Controller:inst|nstate~1          ; |UART|Controller:inst|nstate~1          ; out              ;
+; |UART|Controller:inst|Shift             ; |UART|Controller:inst|Shift             ; out              ;
+; |UART|Controller:inst|nstate            ; |UART|Controller:inst|nstate            ; out              ;
+; |UART|Controller:inst|ResetShift        ; |UART|Controller:inst|ResetShift        ; out              ;
+; |UART|Controller:inst|Load              ; |UART|Controller:inst|Load              ; out              ;
+; |UART|Controller:inst|ResetBaud         ; |UART|Controller:inst|ResetBaud         ; out              ;
+; |UART|Controller:inst|ResetBit          ; |UART|Controller:inst|ResetBit          ; out              ;
+; |UART|ShiftReg:inst2|p_val[0]           ; |UART|ShiftReg:inst2|p_val[0]           ; regout           ;
+; |UART|ShiftReg:inst2|n_val~10           ; |UART|ShiftReg:inst2|n_val~10           ; out              ;
+; |UART|ShiftReg:inst2|n_val[0]           ; |UART|ShiftReg:inst2|n_val[0]           ; out              ;
+; |UART|debouncer:inst11|Selector0~0      ; |UART|debouncer:inst11|Selector0~0      ; out0             ;
+; |UART|debouncer:inst11|Selector0~1      ; |UART|debouncer:inst11|Selector0~1      ; out0             ;
+; |UART|debouncer:inst11|Selector0~2      ; |UART|debouncer:inst11|Selector0~2      ; out0             ;
+; |UART|debouncer:inst11|Selector1~0      ; |UART|debouncer:inst11|Selector1~0      ; out0             ;
+; |UART|debouncer:inst11|Selector1~2      ; |UART|debouncer:inst11|Selector1~2      ; out0             ;
+; |UART|debouncer:inst11|Selector2~0      ; |UART|debouncer:inst11|Selector2~0      ; out0             ;
+; |UART|debouncer:inst11|Selector2~1      ; |UART|debouncer:inst11|Selector2~1      ; out0             ;
+; |UART|debouncer:inst11|Selector2~2      ; |UART|debouncer:inst11|Selector2~2      ; out0             ;
+; |UART|BitCounter:inst12|Add0~0          ; |UART|BitCounter:inst12|Add0~0          ; out0             ;
+; |UART|BitCounter:inst12|Add0~1          ; |UART|BitCounter:inst12|Add0~1          ; out0             ;
+; |UART|BitCounter:inst12|Add0~2          ; |UART|BitCounter:inst12|Add0~2          ; out0             ;
+; |UART|BitCounter:inst12|Add0~3          ; |UART|BitCounter:inst12|Add0~3          ; out0             ;
+; |UART|BitCounter:inst12|Add0~4          ; |UART|BitCounter:inst12|Add0~4          ; out0             ;
+; |UART|BaudCounter:inst14|Add0~0         ; |UART|BaudCounter:inst14|Add0~0         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~1         ; |UART|BaudCounter:inst14|Add0~1         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~2         ; |UART|BaudCounter:inst14|Add0~2         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~3         ; |UART|BaudCounter:inst14|Add0~3         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~4         ; |UART|BaudCounter:inst14|Add0~4         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~5         ; |UART|BaudCounter:inst14|Add0~5         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~6         ; |UART|BaudCounter:inst14|Add0~6         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~7         ; |UART|BaudCounter:inst14|Add0~7         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~8         ; |UART|BaudCounter:inst14|Add0~8         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~9         ; |UART|BaudCounter:inst14|Add0~9         ; out0             ;
+; |UART|BaudCounter:inst14|Add0~10        ; |UART|BaudCounter:inst14|Add0~10        ; out0             ;
+; |UART|BaudCounter:inst14|Add0~11        ; |UART|BaudCounter:inst14|Add0~11        ; out0             ;
+; |UART|BaudCounter:inst14|Add0~12        ; |UART|BaudCounter:inst14|Add0~12        ; out0             ;
+; |UART|BaudCounter:inst14|Add0~13        ; |UART|BaudCounter:inst14|Add0~13        ; out0             ;
+; |UART|BaudCounter:inst14|Add0~14        ; |UART|BaudCounter:inst14|Add0~14        ; out0             ;
+; |UART|BaudCounter:inst14|Add0~15        ; |UART|BaudCounter:inst14|Add0~15        ; out0             ;
+; |UART|BaudCounter:inst14|Add0~16        ; |UART|BaudCounter:inst14|Add0~16        ; out0             ;
+; |UART|BaudCounter:inst14|Add0~17        ; |UART|BaudCounter:inst14|Add0~17        ; out0             ;
+; |UART|BaudCounter:inst14|Add0~18        ; |UART|BaudCounter:inst14|Add0~18        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~0         ; |UART|BaudCounter:inst13|Add0~0         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~1         ; |UART|BaudCounter:inst13|Add0~1         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~2         ; |UART|BaudCounter:inst13|Add0~2         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~3         ; |UART|BaudCounter:inst13|Add0~3         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~4         ; |UART|BaudCounter:inst13|Add0~4         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~5         ; |UART|BaudCounter:inst13|Add0~5         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~6         ; |UART|BaudCounter:inst13|Add0~6         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~7         ; |UART|BaudCounter:inst13|Add0~7         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~8         ; |UART|BaudCounter:inst13|Add0~8         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~9         ; |UART|BaudCounter:inst13|Add0~9         ; out0             ;
+; |UART|BaudCounter:inst13|Add0~10        ; |UART|BaudCounter:inst13|Add0~10        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~11        ; |UART|BaudCounter:inst13|Add0~11        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~12        ; |UART|BaudCounter:inst13|Add0~12        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~13        ; |UART|BaudCounter:inst13|Add0~13        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~14        ; |UART|BaudCounter:inst13|Add0~14        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~15        ; |UART|BaudCounter:inst13|Add0~15        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~16        ; |UART|BaudCounter:inst13|Add0~16        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~17        ; |UART|BaudCounter:inst13|Add0~17        ; out0             ;
+; |UART|BaudCounter:inst13|Add0~18        ; |UART|BaudCounter:inst13|Add0~18        ; out0             ;
+; |UART|BaudCounter:inst5|Add0~0          ; |UART|BaudCounter:inst5|Add0~0          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~1          ; |UART|BaudCounter:inst5|Add0~1          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~2          ; |UART|BaudCounter:inst5|Add0~2          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~3          ; |UART|BaudCounter:inst5|Add0~3          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~4          ; |UART|BaudCounter:inst5|Add0~4          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~5          ; |UART|BaudCounter:inst5|Add0~5          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~6          ; |UART|BaudCounter:inst5|Add0~6          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~7          ; |UART|BaudCounter:inst5|Add0~7          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~8          ; |UART|BaudCounter:inst5|Add0~8          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~9          ; |UART|BaudCounter:inst5|Add0~9          ; out0             ;
+; |UART|BaudCounter:inst5|Add0~10         ; |UART|BaudCounter:inst5|Add0~10         ; out0             ;
+; |UART|BaudCounter:inst5|Add0~11         ; |UART|BaudCounter:inst5|Add0~11         ; out0             ;
+; |UART|BaudCounter:inst5|Add0~12         ; |UART|BaudCounter:inst5|Add0~12         ; out0             ;
+; |UART|BaudCounter:inst5|Add0~13         ; |UART|BaudCounter:inst5|Add0~13         ; out0             ;
+; |UART|BaudCounter:inst5|Add0~14         ; |UART|BaudCounter:inst5|Add0~14         ; out0             ;
+; |UART|BaudCounter:inst5|Add0~15         ; |UART|BaudCounter:inst5|Add0~15         ; out0             ;
+; |UART|BaudCounter:inst5|Add0~16         ; |UART|BaudCounter:inst5|Add0~16         ; out0             ;
+; |UART|BaudCounter:inst5|Add0~17         ; |UART|BaudCounter:inst5|Add0~17         ; out0             ;
+; |UART|BaudCounter:inst5|Add0~18         ; |UART|BaudCounter:inst5|Add0~18         ; out0             ;
+; |UART|BitCounter:inst4|Add0~0           ; |UART|BitCounter:inst4|Add0~0           ; out0             ;
+; |UART|BitCounter:inst4|Add0~1           ; |UART|BitCounter:inst4|Add0~1           ; out0             ;
+; |UART|BitCounter:inst4|Add0~2           ; |UART|BitCounter:inst4|Add0~2           ; out0             ;
+; |UART|BitCounter:inst4|Add0~3           ; |UART|BitCounter:inst4|Add0~3           ; out0             ;
+; |UART|BitCounter:inst4|Add0~4           ; |UART|BitCounter:inst4|Add0~4           ; out0             ;
+; |UART|BitCounter:inst12|Equal0~0        ; |UART|BitCounter:inst12|Equal0~0        ; out0             ;
+; |UART|BaudCounter:inst14|Equal0~0       ; |UART|BaudCounter:inst14|Equal0~0       ; out0             ;
+; |UART|BaudCounter:inst13|Equal0~0       ; |UART|BaudCounter:inst13|Equal0~0       ; out0             ;
+; |UART|BaudCounter:inst5|Equal0~0        ; |UART|BaudCounter:inst5|Equal0~0        ; out0             ;
+; |UART|BitCounter:inst4|Equal0~0         ; |UART|BitCounter:inst4|Equal0~0         ; out0             ;
++-----------------------------------------+-----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |UART|KEY[3]                                    ; |UART|KEY[3]                                    ; out              ;
+; |UART|SW[12]                                    ; |UART|SW[12]                                    ; out              ;
+; |UART|SW[11]                                    ; |UART|SW[11]                                    ; out              ;
+; |UART|SW[10]                                    ; |UART|SW[10]                                    ; out              ;
+; |UART|SW[9]                                     ; |UART|SW[9]                                     ; out              ;
+; |UART|SW[8]                                     ; |UART|SW[8]                                     ; out              ;
+; |UART|SW[7]                                     ; |UART|SW[7]                                     ; out              ;
+; |UART|SW[6]                                     ; |UART|SW[6]                                     ; out              ;
+; |UART|HEX0[0]                                   ; |UART|HEX0[0]                                   ; pin_out          ;
+; |UART|HEX0[1]                                   ; |UART|HEX0[1]                                   ; pin_out          ;
+; |UART|HEX0[2]                                   ; |UART|HEX0[2]                                   ; pin_out          ;
+; |UART|HEX0[3]                                   ; |UART|HEX0[3]                                   ; pin_out          ;
+; |UART|HEX0[4]                                   ; |UART|HEX0[4]                                   ; pin_out          ;
+; |UART|HEX0[5]                                   ; |UART|HEX0[5]                                   ; pin_out          ;
+; |UART|HEX0[6]                                   ; |UART|HEX0[6]                                   ; pin_out          ;
+; |UART|UART_RXD                                  ; |UART|UART_RXD                                  ; out              ;
+; |UART|HEX1[0]                                   ; |UART|HEX1[0]                                   ; pin_out          ;
+; |UART|HEX1[1]                                   ; |UART|HEX1[1]                                   ; pin_out          ;
+; |UART|HEX1[2]                                   ; |UART|HEX1[2]                                   ; pin_out          ;
+; |UART|HEX1[3]                                   ; |UART|HEX1[3]                                   ; pin_out          ;
+; |UART|HEX1[4]                                   ; |UART|HEX1[4]                                   ; pin_out          ;
+; |UART|HEX1[5]                                   ; |UART|HEX1[5]                                   ; pin_out          ;
+; |UART|HEX1[6]                                   ; |UART|HEX1[6]                                   ; pin_out          ;
+; |UART|LEDG[7]                                   ; |UART|LEDG[7]                                   ; pin_out          ;
+; |UART|LEDG[6]                                   ; |UART|LEDG[6]                                   ; pin_out          ;
+; |UART|Decode:inst8|WideOr0                      ; |UART|Decode:inst8|WideOr0                      ; out0             ;
+; |UART|Decode:inst8|WideOr1                      ; |UART|Decode:inst8|WideOr1                      ; out0             ;
+; |UART|Decode:inst8|WideOr3                      ; |UART|Decode:inst8|WideOr3                      ; out0             ;
+; |UART|Decode:inst8|WideOr4                      ; |UART|Decode:inst8|WideOr4                      ; out0             ;
+; |UART|Decode:inst8|WideOr5                      ; |UART|Decode:inst8|WideOr5                      ; out0             ;
+; |UART|Decode:inst8|WideOr6                      ; |UART|Decode:inst8|WideOr6                      ; out0             ;
+; |UART|BaudCounter:inst14|pcount[10]             ; |UART|BaudCounter:inst14|pcount[10]             ; regout           ;
+; |UART|ControllerReciever:inst1|Recieving        ; |UART|ControllerReciever:inst1|Recieving        ; regout           ;
+; |UART|ControllerReciever:inst1|pstate.Wait      ; |UART|ControllerReciever:inst1|pstate.Wait      ; regout           ;
+; |UART|ControllerReciever:inst1|pstate.Half      ; |UART|ControllerReciever:inst1|pstate.Half      ; regout           ;
+; |UART|ControllerReciever:inst1|nstate~0         ; |UART|ControllerReciever:inst1|nstate~0         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~1         ; |UART|ControllerReciever:inst1|nstate~1         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~2         ; |UART|ControllerReciever:inst1|nstate~2         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~4         ; |UART|ControllerReciever:inst1|nstate~4         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~6         ; |UART|ControllerReciever:inst1|nstate~6         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~7         ; |UART|ControllerReciever:inst1|nstate~7         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~8         ; |UART|ControllerReciever:inst1|nstate~8         ; out              ;
+; |UART|ControllerReciever:inst1|pstate.Receive   ; |UART|ControllerReciever:inst1|pstate.Receive   ; regout           ;
+; |UART|ControllerReciever:inst1|ResetHalfBaud    ; |UART|ControllerReciever:inst1|ResetHalfBaud    ; out              ;
+; |UART|ControllerReciever:inst1|ResetBaud        ; |UART|ControllerReciever:inst1|ResetBaud        ; out              ;
+; |UART|ControllerReciever:inst1|ResetBitCount    ; |UART|ControllerReciever:inst1|ResetBitCount    ; out              ;
+; |UART|ControllerReciever:inst1|pstate~1         ; |UART|ControllerReciever:inst1|pstate~1         ; out0             ;
+; |UART|ControllerReciever:inst1|pstate.Wait~0    ; |UART|ControllerReciever:inst1|pstate.Wait~0    ; out0             ;
+; |UART|ControllerReciever:inst1|nstate~10        ; |UART|ControllerReciever:inst1|nstate~10        ; out0             ;
+; |UART|ControllerReciever:inst1|pstate.Half~0    ; |UART|ControllerReciever:inst1|pstate.Half~0    ; out0             ;
+; |UART|ControllerReciever:inst1|nstate~12        ; |UART|ControllerReciever:inst1|nstate~12        ; out0             ;
+; |UART|ControllerReciever:inst1|pstate.Receive~0 ; |UART|ControllerReciever:inst1|pstate.Receive~0 ; out0             ;
+; |UART|ControllerReciever:inst1|nstate~14        ; |UART|ControllerReciever:inst1|nstate~14        ; out0             ;
+; |UART|ControllerReciever:inst1|pstate~9         ; |UART|ControllerReciever:inst1|pstate~9         ; out0             ;
+; |UART|DeShiftReg:inst10|p_val[0]                ; |UART|DeShiftReg:inst10|p_val[0]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[10]               ; |UART|DeShiftReg:inst10|p_val[10]               ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[9]                ; |UART|DeShiftReg:inst10|p_val[9]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[8]                ; |UART|DeShiftReg:inst10|p_val[8]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[7]                ; |UART|DeShiftReg:inst10|p_val[7]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[6]                ; |UART|DeShiftReg:inst10|p_val[6]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[5]                ; |UART|DeShiftReg:inst10|p_val[5]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[4]                ; |UART|DeShiftReg:inst10|p_val[4]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[3]                ; |UART|DeShiftReg:inst10|p_val[3]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[2]                ; |UART|DeShiftReg:inst10|p_val[2]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[1]                ; |UART|DeShiftReg:inst10|p_val[1]                ; regout           ;
+; |UART|ParityReciever:inst6|WideXor0             ; |UART|ParityReciever:inst6|WideXor0             ; out0             ;
+; |UART|ParityReciever:inst6|ParityError          ; |UART|ParityReciever:inst6|ParityError          ; out0             ;
+; |UART|Decode:inst9|WideOr0                      ; |UART|Decode:inst9|WideOr0                      ; out0             ;
+; |UART|Decode:inst9|WideOr1                      ; |UART|Decode:inst9|WideOr1                      ; out0             ;
+; |UART|Decode:inst9|WideOr2                      ; |UART|Decode:inst9|WideOr2                      ; out0             ;
+; |UART|Decode:inst9|WideOr3                      ; |UART|Decode:inst9|WideOr3                      ; out0             ;
+; |UART|Decode:inst9|WideOr4                      ; |UART|Decode:inst9|WideOr4                      ; out0             ;
+; |UART|Decode:inst9|WideOr5                      ; |UART|Decode:inst9|WideOr5                      ; out0             ;
+; |UART|Decode:inst9|WideOr6                      ; |UART|Decode:inst9|WideOr6                      ; out0             ;
+; |UART|Parity:inst3|WideXor0                     ; |UART|Parity:inst3|WideXor0                     ; out0             ;
+; |UART|debouncer:inst11|pstate~1                 ; |UART|debouncer:inst11|pstate~1                 ; out0             ;
+; |UART|debouncer:inst11|pstate~9                 ; |UART|debouncer:inst11|pstate~9                 ; out0             ;
+; |UART|ShiftReg:inst2|p_val[10]                  ; |UART|ShiftReg:inst2|p_val[10]                  ; regout           ;
+; |UART|ShiftReg:inst2|p_val[9]                   ; |UART|ShiftReg:inst2|p_val[9]                   ; regout           ;
+; |UART|ShiftReg:inst2|n_val~0                    ; |UART|ShiftReg:inst2|n_val~0                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~1                    ; |UART|ShiftReg:inst2|n_val~1                    ; out              ;
+; |UART|ShiftReg:inst2|n_val[10]                  ; |UART|ShiftReg:inst2|n_val[10]                  ; out              ;
+; |UART|ShiftReg:inst2|n_val[9]                   ; |UART|ShiftReg:inst2|n_val[9]                   ; out              ;
+; |UART|ControllerReciever:inst1|Selector0~0      ; |UART|ControllerReciever:inst1|Selector0~0      ; out              ;
+; |UART|ControllerReciever:inst1|Selector0~1      ; |UART|ControllerReciever:inst1|Selector0~1      ; out              ;
+; |UART|ControllerReciever:inst1|Selector1~0      ; |UART|ControllerReciever:inst1|Selector1~0      ; out              ;
+; |UART|ControllerReciever:inst1|Selector1~1      ; |UART|ControllerReciever:inst1|Selector1~1      ; out              ;
+; |UART|ControllerReciever:inst1|Selector2~0      ; |UART|ControllerReciever:inst1|Selector2~0      ; out              ;
+; |UART|ControllerReciever:inst1|Selector2~1      ; |UART|ControllerReciever:inst1|Selector2~1      ; out              ;
+; |UART|ControllerReciever:inst1|Selector3~0      ; |UART|ControllerReciever:inst1|Selector3~0      ; out0             ;
+; |UART|ControllerReciever:inst1|Selector3~1      ; |UART|ControllerReciever:inst1|Selector3~1      ; out0             ;
+; |UART|ControllerReciever:inst1|Selector3~2      ; |UART|ControllerReciever:inst1|Selector3~2      ; out0             ;
+; |UART|debouncer:inst11|Selector1~1              ; |UART|debouncer:inst11|Selector1~1              ; out0             ;
+; |UART|Decode:inst8|Decoder0~0                   ; |UART|Decode:inst8|Decoder0~0                   ; out              ;
+; |UART|Decode:inst8|Decoder0~1                   ; |UART|Decode:inst8|Decoder0~1                   ; out              ;
+; |UART|Decode:inst8|Decoder0~2                   ; |UART|Decode:inst8|Decoder0~2                   ; out              ;
+; |UART|Decode:inst8|Decoder0~3                   ; |UART|Decode:inst8|Decoder0~3                   ; out              ;
+; |UART|Decode:inst8|Decoder0~4                   ; |UART|Decode:inst8|Decoder0~4                   ; out              ;
+; |UART|Decode:inst8|Decoder0~5                   ; |UART|Decode:inst8|Decoder0~5                   ; out              ;
+; |UART|Decode:inst8|Decoder0~6                   ; |UART|Decode:inst8|Decoder0~6                   ; out              ;
+; |UART|Decode:inst8|Decoder0~7                   ; |UART|Decode:inst8|Decoder0~7                   ; out              ;
+; |UART|Decode:inst9|Decoder0~0                   ; |UART|Decode:inst9|Decoder0~0                   ; out              ;
+; |UART|Decode:inst9|Decoder0~1                   ; |UART|Decode:inst9|Decoder0~1                   ; out              ;
+; |UART|Decode:inst9|Decoder0~2                   ; |UART|Decode:inst9|Decoder0~2                   ; out              ;
+; |UART|Decode:inst9|Decoder0~3                   ; |UART|Decode:inst9|Decoder0~3                   ; out              ;
+; |UART|Decode:inst9|Decoder0~4                   ; |UART|Decode:inst9|Decoder0~4                   ; out              ;
+; |UART|Decode:inst9|Decoder0~5                   ; |UART|Decode:inst9|Decoder0~5                   ; out              ;
+; |UART|Decode:inst9|Decoder0~6                   ; |UART|Decode:inst9|Decoder0~6                   ; out              ;
+; |UART|Decode:inst9|Decoder0~7                   ; |UART|Decode:inst9|Decoder0~7                   ; out              ;
+; |UART|Decode:inst9|Decoder0~8                   ; |UART|Decode:inst9|Decoder0~8                   ; out              ;
+; |UART|Decode:inst9|Decoder0~9                   ; |UART|Decode:inst9|Decoder0~9                   ; out              ;
+; |UART|Decode:inst9|Decoder0~10                  ; |UART|Decode:inst9|Decoder0~10                  ; out              ;
+; |UART|Decode:inst9|Decoder0~11                  ; |UART|Decode:inst9|Decoder0~11                  ; out              ;
+; |UART|Decode:inst9|Decoder0~12                  ; |UART|Decode:inst9|Decoder0~12                  ; out              ;
+; |UART|Decode:inst9|Decoder0~13                  ; |UART|Decode:inst9|Decoder0~13                  ; out              ;
+; |UART|Decode:inst9|Decoder0~14                  ; |UART|Decode:inst9|Decoder0~14                  ; out              ;
+; |UART|ParityReciever:inst6|Equal0~0             ; |UART|ParityReciever:inst6|Equal0~0             ; out0             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; Node Name                                       ; Output Port Name                                ; Output Port Type ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+; |UART|KEY[3]                                    ; |UART|KEY[3]                                    ; out              ;
+; |UART|SW[12]                                    ; |UART|SW[12]                                    ; out              ;
+; |UART|SW[11]                                    ; |UART|SW[11]                                    ; out              ;
+; |UART|SW[10]                                    ; |UART|SW[10]                                    ; out              ;
+; |UART|SW[9]                                     ; |UART|SW[9]                                     ; out              ;
+; |UART|SW[8]                                     ; |UART|SW[8]                                     ; out              ;
+; |UART|SW[7]                                     ; |UART|SW[7]                                     ; out              ;
+; |UART|SW[6]                                     ; |UART|SW[6]                                     ; out              ;
+; |UART|HEX0[0]                                   ; |UART|HEX0[0]                                   ; pin_out          ;
+; |UART|HEX0[1]                                   ; |UART|HEX0[1]                                   ; pin_out          ;
+; |UART|HEX0[2]                                   ; |UART|HEX0[2]                                   ; pin_out          ;
+; |UART|HEX0[3]                                   ; |UART|HEX0[3]                                   ; pin_out          ;
+; |UART|HEX0[4]                                   ; |UART|HEX0[4]                                   ; pin_out          ;
+; |UART|HEX0[5]                                   ; |UART|HEX0[5]                                   ; pin_out          ;
+; |UART|HEX0[6]                                   ; |UART|HEX0[6]                                   ; pin_out          ;
+; |UART|UART_RXD                                  ; |UART|UART_RXD                                  ; out              ;
+; |UART|HEX1[0]                                   ; |UART|HEX1[0]                                   ; pin_out          ;
+; |UART|HEX1[1]                                   ; |UART|HEX1[1]                                   ; pin_out          ;
+; |UART|HEX1[2]                                   ; |UART|HEX1[2]                                   ; pin_out          ;
+; |UART|HEX1[3]                                   ; |UART|HEX1[3]                                   ; pin_out          ;
+; |UART|HEX1[4]                                   ; |UART|HEX1[4]                                   ; pin_out          ;
+; |UART|HEX1[5]                                   ; |UART|HEX1[5]                                   ; pin_out          ;
+; |UART|HEX1[6]                                   ; |UART|HEX1[6]                                   ; pin_out          ;
+; |UART|LEDG[7]                                   ; |UART|LEDG[7]                                   ; pin_out          ;
+; |UART|LEDG[6]                                   ; |UART|LEDG[6]                                   ; pin_out          ;
+; |UART|Decode:inst8|WideOr0                      ; |UART|Decode:inst8|WideOr0                      ; out0             ;
+; |UART|Decode:inst8|WideOr1                      ; |UART|Decode:inst8|WideOr1                      ; out0             ;
+; |UART|Decode:inst8|WideOr3                      ; |UART|Decode:inst8|WideOr3                      ; out0             ;
+; |UART|Decode:inst8|WideOr4                      ; |UART|Decode:inst8|WideOr4                      ; out0             ;
+; |UART|Decode:inst8|WideOr5                      ; |UART|Decode:inst8|WideOr5                      ; out0             ;
+; |UART|Decode:inst8|WideOr6                      ; |UART|Decode:inst8|WideOr6                      ; out0             ;
+; |UART|BitCounter:inst12|pcount[3]               ; |UART|BitCounter:inst12|pcount[3]               ; regout           ;
+; |UART|BaudCounter:inst14|pcount[10]             ; |UART|BaudCounter:inst14|pcount[10]             ; regout           ;
+; |UART|ControllerReciever:inst1|Recieving        ; |UART|ControllerReciever:inst1|Recieving        ; regout           ;
+; |UART|ControllerReciever:inst1|pstate.Wait      ; |UART|ControllerReciever:inst1|pstate.Wait      ; regout           ;
+; |UART|ControllerReciever:inst1|pstate.Half      ; |UART|ControllerReciever:inst1|pstate.Half      ; regout           ;
+; |UART|ControllerReciever:inst1|nstate~0         ; |UART|ControllerReciever:inst1|nstate~0         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~1         ; |UART|ControllerReciever:inst1|nstate~1         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~2         ; |UART|ControllerReciever:inst1|nstate~2         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~4         ; |UART|ControllerReciever:inst1|nstate~4         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~6         ; |UART|ControllerReciever:inst1|nstate~6         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~7         ; |UART|ControllerReciever:inst1|nstate~7         ; out              ;
+; |UART|ControllerReciever:inst1|nstate~8         ; |UART|ControllerReciever:inst1|nstate~8         ; out              ;
+; |UART|ControllerReciever:inst1|pstate.Receive   ; |UART|ControllerReciever:inst1|pstate.Receive   ; regout           ;
+; |UART|ControllerReciever:inst1|ResetHalfBaud    ; |UART|ControllerReciever:inst1|ResetHalfBaud    ; out              ;
+; |UART|ControllerReciever:inst1|ResetBaud        ; |UART|ControllerReciever:inst1|ResetBaud        ; out              ;
+; |UART|ControllerReciever:inst1|ResetBitCount    ; |UART|ControllerReciever:inst1|ResetBitCount    ; out              ;
+; |UART|ControllerReciever:inst1|pstate~1         ; |UART|ControllerReciever:inst1|pstate~1         ; out0             ;
+; |UART|ControllerReciever:inst1|pstate.Wait~0    ; |UART|ControllerReciever:inst1|pstate.Wait~0    ; out0             ;
+; |UART|ControllerReciever:inst1|nstate~10        ; |UART|ControllerReciever:inst1|nstate~10        ; out0             ;
+; |UART|ControllerReciever:inst1|pstate.Half~0    ; |UART|ControllerReciever:inst1|pstate.Half~0    ; out0             ;
+; |UART|ControllerReciever:inst1|nstate~12        ; |UART|ControllerReciever:inst1|nstate~12        ; out0             ;
+; |UART|ControllerReciever:inst1|pstate.Receive~0 ; |UART|ControllerReciever:inst1|pstate.Receive~0 ; out0             ;
+; |UART|ControllerReciever:inst1|nstate~14        ; |UART|ControllerReciever:inst1|nstate~14        ; out0             ;
+; |UART|ControllerReciever:inst1|pstate~9         ; |UART|ControllerReciever:inst1|pstate~9         ; out0             ;
+; |UART|DeShiftReg:inst10|p_val[0]                ; |UART|DeShiftReg:inst10|p_val[0]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[10]               ; |UART|DeShiftReg:inst10|p_val[10]               ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[9]                ; |UART|DeShiftReg:inst10|p_val[9]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[8]                ; |UART|DeShiftReg:inst10|p_val[8]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[7]                ; |UART|DeShiftReg:inst10|p_val[7]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[6]                ; |UART|DeShiftReg:inst10|p_val[6]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[5]                ; |UART|DeShiftReg:inst10|p_val[5]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[4]                ; |UART|DeShiftReg:inst10|p_val[4]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[3]                ; |UART|DeShiftReg:inst10|p_val[3]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[2]                ; |UART|DeShiftReg:inst10|p_val[2]                ; regout           ;
+; |UART|DeShiftReg:inst10|p_val[1]                ; |UART|DeShiftReg:inst10|p_val[1]                ; regout           ;
+; |UART|ParityReciever:inst6|WideXor0             ; |UART|ParityReciever:inst6|WideXor0             ; out0             ;
+; |UART|ParityReciever:inst6|ParityError          ; |UART|ParityReciever:inst6|ParityError          ; out0             ;
+; |UART|Decode:inst9|WideOr0                      ; |UART|Decode:inst9|WideOr0                      ; out0             ;
+; |UART|Decode:inst9|WideOr1                      ; |UART|Decode:inst9|WideOr1                      ; out0             ;
+; |UART|Decode:inst9|WideOr2                      ; |UART|Decode:inst9|WideOr2                      ; out0             ;
+; |UART|Decode:inst9|WideOr3                      ; |UART|Decode:inst9|WideOr3                      ; out0             ;
+; |UART|Decode:inst9|WideOr4                      ; |UART|Decode:inst9|WideOr4                      ; out0             ;
+; |UART|Decode:inst9|WideOr5                      ; |UART|Decode:inst9|WideOr5                      ; out0             ;
+; |UART|Decode:inst9|WideOr6                      ; |UART|Decode:inst9|WideOr6                      ; out0             ;
+; |UART|Parity:inst3|WideXor0                     ; |UART|Parity:inst3|WideXor0                     ; out0             ;
+; |UART|debouncer:inst11|pstate~1                 ; |UART|debouncer:inst11|pstate~1                 ; out0             ;
+; |UART|debouncer:inst11|pstate~9                 ; |UART|debouncer:inst11|pstate~9                 ; out0             ;
+; |UART|BitCounter:inst4|pcount[3]                ; |UART|BitCounter:inst4|pcount[3]                ; regout           ;
+; |UART|ShiftReg:inst2|p_val[10]                  ; |UART|ShiftReg:inst2|p_val[10]                  ; regout           ;
+; |UART|ShiftReg:inst2|p_val[9]                   ; |UART|ShiftReg:inst2|p_val[9]                   ; regout           ;
+; |UART|ShiftReg:inst2|p_val[8]                   ; |UART|ShiftReg:inst2|p_val[8]                   ; regout           ;
+; |UART|ShiftReg:inst2|p_val[7]                   ; |UART|ShiftReg:inst2|p_val[7]                   ; regout           ;
+; |UART|ShiftReg:inst2|p_val[6]                   ; |UART|ShiftReg:inst2|p_val[6]                   ; regout           ;
+; |UART|ShiftReg:inst2|p_val[5]                   ; |UART|ShiftReg:inst2|p_val[5]                   ; regout           ;
+; |UART|ShiftReg:inst2|p_val[4]                   ; |UART|ShiftReg:inst2|p_val[4]                   ; regout           ;
+; |UART|ShiftReg:inst2|p_val[3]                   ; |UART|ShiftReg:inst2|p_val[3]                   ; regout           ;
+; |UART|ShiftReg:inst2|p_val[2]                   ; |UART|ShiftReg:inst2|p_val[2]                   ; regout           ;
+; |UART|ShiftReg:inst2|p_val[1]                   ; |UART|ShiftReg:inst2|p_val[1]                   ; regout           ;
+; |UART|ShiftReg:inst2|n_val~0                    ; |UART|ShiftReg:inst2|n_val~0                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~1                    ; |UART|ShiftReg:inst2|n_val~1                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~2                    ; |UART|ShiftReg:inst2|n_val~2                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~3                    ; |UART|ShiftReg:inst2|n_val~3                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~4                    ; |UART|ShiftReg:inst2|n_val~4                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~5                    ; |UART|ShiftReg:inst2|n_val~5                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~6                    ; |UART|ShiftReg:inst2|n_val~6                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~7                    ; |UART|ShiftReg:inst2|n_val~7                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~8                    ; |UART|ShiftReg:inst2|n_val~8                    ; out              ;
+; |UART|ShiftReg:inst2|n_val~9                    ; |UART|ShiftReg:inst2|n_val~9                    ; out              ;
+; |UART|ShiftReg:inst2|n_val[10]                  ; |UART|ShiftReg:inst2|n_val[10]                  ; out              ;
+; |UART|ShiftReg:inst2|n_val[9]                   ; |UART|ShiftReg:inst2|n_val[9]                   ; out              ;
+; |UART|ShiftReg:inst2|n_val[8]                   ; |UART|ShiftReg:inst2|n_val[8]                   ; out              ;
+; |UART|ShiftReg:inst2|n_val[7]                   ; |UART|ShiftReg:inst2|n_val[7]                   ; out              ;
+; |UART|ShiftReg:inst2|n_val[6]                   ; |UART|ShiftReg:inst2|n_val[6]                   ; out              ;
+; |UART|ShiftReg:inst2|n_val[5]                   ; |UART|ShiftReg:inst2|n_val[5]                   ; out              ;
+; |UART|ShiftReg:inst2|n_val[4]                   ; |UART|ShiftReg:inst2|n_val[4]                   ; out              ;
+; |UART|ShiftReg:inst2|n_val[3]                   ; |UART|ShiftReg:inst2|n_val[3]                   ; out              ;
+; |UART|ShiftReg:inst2|n_val[2]                   ; |UART|ShiftReg:inst2|n_val[2]                   ; out              ;
+; |UART|ShiftReg:inst2|n_val[1]                   ; |UART|ShiftReg:inst2|n_val[1]                   ; out              ;
+; |UART|ControllerReciever:inst1|Selector0~0      ; |UART|ControllerReciever:inst1|Selector0~0      ; out              ;
+; |UART|ControllerReciever:inst1|Selector0~1      ; |UART|ControllerReciever:inst1|Selector0~1      ; out              ;
+; |UART|ControllerReciever:inst1|Selector1~0      ; |UART|ControllerReciever:inst1|Selector1~0      ; out              ;
+; |UART|ControllerReciever:inst1|Selector1~1      ; |UART|ControllerReciever:inst1|Selector1~1      ; out              ;
+; |UART|ControllerReciever:inst1|Selector2~0      ; |UART|ControllerReciever:inst1|Selector2~0      ; out              ;
+; |UART|ControllerReciever:inst1|Selector2~1      ; |UART|ControllerReciever:inst1|Selector2~1      ; out              ;
+; |UART|ControllerReciever:inst1|Selector3~0      ; |UART|ControllerReciever:inst1|Selector3~0      ; out0             ;
+; |UART|ControllerReciever:inst1|Selector3~1      ; |UART|ControllerReciever:inst1|Selector3~1      ; out0             ;
+; |UART|ControllerReciever:inst1|Selector3~2      ; |UART|ControllerReciever:inst1|Selector3~2      ; out0             ;
+; |UART|debouncer:inst11|Selector1~1              ; |UART|debouncer:inst11|Selector1~1              ; out0             ;
+; |UART|Decode:inst8|Decoder0~0                   ; |UART|Decode:inst8|Decoder0~0                   ; out              ;
+; |UART|Decode:inst8|Decoder0~1                   ; |UART|Decode:inst8|Decoder0~1                   ; out              ;
+; |UART|Decode:inst8|Decoder0~2                   ; |UART|Decode:inst8|Decoder0~2                   ; out              ;
+; |UART|Decode:inst8|Decoder0~3                   ; |UART|Decode:inst8|Decoder0~3                   ; out              ;
+; |UART|Decode:inst8|Decoder0~4                   ; |UART|Decode:inst8|Decoder0~4                   ; out              ;
+; |UART|Decode:inst8|Decoder0~5                   ; |UART|Decode:inst8|Decoder0~5                   ; out              ;
+; |UART|Decode:inst8|Decoder0~6                   ; |UART|Decode:inst8|Decoder0~6                   ; out              ;
+; |UART|Decode:inst8|Decoder0~7                   ; |UART|Decode:inst8|Decoder0~7                   ; out              ;
+; |UART|Decode:inst9|Decoder0~0                   ; |UART|Decode:inst9|Decoder0~0                   ; out              ;
+; |UART|Decode:inst9|Decoder0~1                   ; |UART|Decode:inst9|Decoder0~1                   ; out              ;
+; |UART|Decode:inst9|Decoder0~2                   ; |UART|Decode:inst9|Decoder0~2                   ; out              ;
+; |UART|Decode:inst9|Decoder0~3                   ; |UART|Decode:inst9|Decoder0~3                   ; out              ;
+; |UART|Decode:inst9|Decoder0~4                   ; |UART|Decode:inst9|Decoder0~4                   ; out              ;
+; |UART|Decode:inst9|Decoder0~5                   ; |UART|Decode:inst9|Decoder0~5                   ; out              ;
+; |UART|Decode:inst9|Decoder0~6                   ; |UART|Decode:inst9|Decoder0~6                   ; out              ;
+; |UART|Decode:inst9|Decoder0~7                   ; |UART|Decode:inst9|Decoder0~7                   ; out              ;
+; |UART|Decode:inst9|Decoder0~8                   ; |UART|Decode:inst9|Decoder0~8                   ; out              ;
+; |UART|Decode:inst9|Decoder0~9                   ; |UART|Decode:inst9|Decoder0~9                   ; out              ;
+; |UART|Decode:inst9|Decoder0~10                  ; |UART|Decode:inst9|Decoder0~10                  ; out              ;
+; |UART|Decode:inst9|Decoder0~11                  ; |UART|Decode:inst9|Decoder0~11                  ; out              ;
+; |UART|Decode:inst9|Decoder0~12                  ; |UART|Decode:inst9|Decoder0~12                  ; out              ;
+; |UART|Decode:inst9|Decoder0~13                  ; |UART|Decode:inst9|Decoder0~13                  ; out              ;
+; |UART|Decode:inst9|Decoder0~14                  ; |UART|Decode:inst9|Decoder0~14                  ; out              ;
+; |UART|ParityReciever:inst6|Equal0~0             ; |UART|ParityReciever:inst6|Equal0~0             ; out0             ;
++-------------------------------------------------+-------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Nov 29 10:20:32 2019
+Info: Command: quartus_sim --simulation_results_format=VWF UART -c UART
+Info (324025): Using vector source file "M:/ELEC473/UART/Waveform.vwf"
+Warning (328014): Can't find node "SW[5]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "SW[4]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "SW[3]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "SW[2]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "SW[1]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "SW[0]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "Splitter:inst7|LeastSig[3]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "Splitter:inst7|LeastSig[2]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "Splitter:inst7|LeastSig[1]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "Splitter:inst7|LeastSig[0]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "Splitter:inst7|MostSig[3]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "Splitter:inst7|MostSig[2]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "Splitter:inst7|MostSig[1]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "Splitter:inst7|MostSig[0]" for functional simulation. Ignored vector source file node.
+Warning (328012): Can't find signal in vector source file for input pin "|UART|SW[12]"
+Warning (328012): Can't find signal in vector source file for input pin "|UART|SW[11]"
+Warning (328012): Can't find signal in vector source file for input pin "|UART|SW[10]"
+Warning (328012): Can't find signal in vector source file for input pin "|UART|SW[9]"
+Warning (328012): Can't find signal in vector source file for input pin "|UART|SW[8]"
+Warning (328012): Can't find signal in vector source file for input pin "|UART|SW[7]"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      56.00 %
+Info (328052): Number of transitions in simulation is 941314
+Info (324045): Vector file UART.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4475 megabytes
+    Info: Processing ended: Fri Nov 29 10:20:34 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

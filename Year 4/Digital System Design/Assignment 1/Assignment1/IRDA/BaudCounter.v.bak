@@ -1,0 +1,24 @@
+module BaudCounter (clk, reset_n, Baud);
+	input clk, reset_n;
+	output reg Baud;
+	
+	reg [10:0] pCount, nCount;
+	parameter maxCount = 11'd1302;
+	
+	always @(posedge clk, negedge reset_n)
+	if (reset_n == 0)
+		pCount<=11'b0;
+	else 
+		pCount<=nCount;
+		
+	always @(pCount)
+	begin 
+		Baud = 0;
+		nCount = pCount + 1'b1;
+		if (pCount == maxCount)
+			begin
+				Baud = 1;
+				nCount = 11'd0;
+			end
+	end
+endmodule 

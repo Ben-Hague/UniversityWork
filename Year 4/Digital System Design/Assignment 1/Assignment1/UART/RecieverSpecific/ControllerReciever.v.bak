@@ -1,0 +1,65 @@
+module ControllerReciever(clk,reset_n,Baud,HalfBaud,B_Done,RxD, Shift,Update,ResetBaud,ResetHalfBaud,ResetBitCount );
+input clk, reset_n;
+input Baud, HalfBaud, B_Done, RxD;
+output reg Shift,Update,ResetBaud,ResetHalfBaud,ResetBitCount;
+
+parameter[1:0] Wait = 2'b00, Half =2'b01, Receive = 2'b11;
+reg[1:0] pstate, nstate;
+
+reg Recieving;
+
+always @(negedge RxD, posedge clk)
+	if (RxD == 0) 
+		Recieving = 1;
+	else Recieving = 0;
+
+always @ (posedge clk, negedge reset_n)
+	if (reset_n == 0)
+		pstate <= Wait;
+	else pstate <= nstate;
+
+
+always @(Shift, Baud, HalfBaud,pstate, B_Done, Recieving)
+begin
+	ResetBaud = 1;
+	ResetHalfBaud = 1;
+	ResetBitCount = 1;
+	
+	Shift = 0;
+	Update = 0;
+	
+	nstate = pstate;
+	case (pstate)
+	Wait:
+	begin 
+		if (Recieving)
+			begin
+				ResetHalfBaud = 0;
+				nstate = Half;
+			end
+	end
+	Half:
+	begin 
+		if (HalfBaud)
+		begin
+			ResetBaud = 0;
+			ResetBitCount = 0;
+			nstate = Receive;
+			Shift = 1;
+		end
+	end
+	Receive:
+	begin
+		if (Baud)
+		begin 
+			Shift = 1;
+		end
+		if (B_Done)
+		begin
+			Update = 1;
+			nstate = Wait;
+		end
+	end
+	endcase
+end
+endmodule

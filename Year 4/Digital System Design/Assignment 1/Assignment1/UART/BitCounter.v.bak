@@ -1,0 +1,27 @@
+module BitCounter (inc, clk, reset_n, B_Done);
+	input inc, clk, reset_n;
+	output reg B_Done;
+	
+	reg [3:0] pCount, nCount;
+	parameter maxCount = 4'b1010;
+	
+	always @(posedge clk, negedge reset_n)
+	if (reset_n == 0)
+		pCount<=4'b0000;
+	else 
+		pCount<=nCount;
+		
+	always @(pCount,inc)
+	begin 
+		B_Done = 0;
+		nCount = pCount;
+		if (inc)
+			begin
+				nCount = pCount + 1'b1;
+			end
+		if (pCount == maxCount)
+			begin
+				B_Done = 1;
+			end
+	end
+endmodule 

@@ -1,0 +1,30 @@
+module DeShiftReg(Data, Update, Shift, RxD, clk, reset_n);
+	// Input for Clock and Reset, Always Needed
+	input clk;
+	input reset_n;
+	// Input for Data (width 7), Update and Shift
+	output reg [10:0] Data;
+	input Shift,Update;
+	// reg to hold Present and Next Value for cycled Data
+	reg [10:0] p_val, n_val;
+	//Parity must be reg to write data to it
+	input RxD;
+	// Define states as parameters
+	parameter defVal = 11'b00000000000;
+	// functional logical things, define reset state and the next state
+	always @ (posedge clk, negedge reset_n)
+		if (reset_n == 0) 
+			p_val <= defVal;
+		else p_val <= n_val;
+
+	
+	always @ (Shift, Update)
+		begin
+			n_val = p_val;
+			Data = p_val;				  
+			if (Update)
+				Data = p_val;
+			if (Shift == 1)
+				n_val = {RxD, p_val[10:1]};
+		end
+endmodule

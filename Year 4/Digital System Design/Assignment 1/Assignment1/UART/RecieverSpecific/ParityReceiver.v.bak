@@ -1,0 +1,17 @@
+module ParityReciever(Data, OutData, ParityError, FramingError);
+	input [10:0] Data;
+	output [6:0] OutData;
+	output ParityError, FramingError;
+	
+	wire Parity;
+	wire [1:0]StartStop;
+	
+	assign OutData[6:0] = Data[7:1];
+	assign Parity = Data[8];
+	assign StartStop[1:0] = {Data[0], Data[10:9]};
+	
+
+	assign ParityError = ^OutData != Parity;
+	assign FramingError = (StartStop != 3'b011);	
+
+endmodule

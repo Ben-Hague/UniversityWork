@@ -1,0 +1,12 @@
+
+State Machine - |UART|ControllerReciever:inst1|pstate
+Name pstate.Half pstate.Receive pstate.Wait 
+pstate.Wait 0 0 0 
+pstate.Half 1 0 1 
+pstate.Receive 0 1 1 
+
+State Machine - |UART|debouncer:inst11|pstate
+Name pstate.Hold pstate.Wait pstate.Pulse 
+pstate.Hold 0 0 0 
+pstate.Pulse 1 0 1 
+pstate.Wait 1 1 0 

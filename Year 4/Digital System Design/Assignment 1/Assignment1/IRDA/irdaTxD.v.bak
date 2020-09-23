@@ -1,0 +1,46 @@
+module irdaTxD(Load,Shift,Count,TxD,clk,reset_n,IrDA,CountReset);
+		input clk,reset_n;
+		
+		input Load, Shift,Count,TxD;
+		output reg IrDA, CountReset;
+		
+		parameter[1:0] Wait = 2'b01,Delay = 2'b11, Send = 2'b10, Hold = 2'b00;
+		
+		reg [1:0]pstate = Wait, nstate;
+		
+		always@(posedge clk, negedge reset_n)
+			if (reset_n==0)
+				pstate <= Wait;
+			else 
+				pstate <= nstate;
+		
+		always@(Load,Shift,Count, pstate, TxD)
+		begin
+		IrDA = 0;
+		CountReset = 1;
+		nstate = pstate;
+		case (pstate)
+		Wait:
+			if (Load)
+			begin
+				CountReset = 0;
+				nstate = Delay;
+			end
+		Delay:
+		if (Count)
+			nstate = Send;
+		Send:
+		begin
+			IrDA = !TxD;
+			if (Count)
+				nstate = Hold;
+		end
+		Hold:
+			if (Shift)
+			begin
+				CountReset = 0;
+				nstate = Delay;
+			end 
+		endcase
+		end
+	endmodule

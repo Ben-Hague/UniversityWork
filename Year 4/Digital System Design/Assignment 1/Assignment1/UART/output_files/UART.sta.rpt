@@ -1,0 +1,1727 @@
+TimeQuest Timing Analyzer report for UART
+Fri Nov 29 10:16:59 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Hold: 'CLOCK_50'
+ 13. Slow Model Recovery: 'CLOCK_50'
+ 14. Slow Model Removal: 'CLOCK_50'
+ 15. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'CLOCK_50'
+ 26. Fast Model Hold: 'CLOCK_50'
+ 27. Fast Model Recovery: 'CLOCK_50'
+ 28. Fast Model Removal: 'CLOCK_50'
+ 29. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                       ;
++--------------------+--------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version ;
+; Revision Name      ; UART                                                               ;
+; Device Family      ; Cyclone II                                                         ;
+; Device Name        ; EP2C35F672C6                                                       ;
+; Timing Models      ; Final                                                              ;
+; Delay Model        ; Combined                                                           ;
+; Rise/Fall Delays   ; Unavailable                                                        ;
++--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 298.95 MHz ; 298.95 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -2.345 ; -103.168      ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.391 ; 0.000         ;
++----------+-------+---------------+
+
+
++-----------------------------------+
+; Slow Model Recovery Summary       ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -2.035 ; -71.351       ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Removal Summary       ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 1.642 ; 0.000         ;
++----------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -70.380            ;
++----------+--------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                               ;
++--------+-------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -2.345 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.380      ;
+; -2.345 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.380      ;
+; -2.345 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.380      ;
+; -2.345 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.380      ;
+; -2.345 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.380      ;
+; -2.336 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.372      ;
+; -2.336 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.372      ;
+; -2.336 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.372      ;
+; -2.336 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.372      ;
+; -2.336 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.372      ;
+; -2.336 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.372      ;
+; -2.311 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.347      ;
+; -2.311 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.347      ;
+; -2.311 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.347      ;
+; -2.311 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.347      ;
+; -2.311 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.347      ;
+; -2.302 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.339      ;
+; -2.302 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.339      ;
+; -2.302 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.339      ;
+; -2.302 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.339      ;
+; -2.302 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.339      ;
+; -2.302 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.339      ;
+; -2.299 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.335      ;
+; -2.299 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.335      ;
+; -2.299 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.335      ;
+; -2.299 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.335      ;
+; -2.299 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.335      ;
+; -2.290 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.327      ;
+; -2.290 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.327      ;
+; -2.290 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.327      ;
+; -2.290 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.327      ;
+; -2.290 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.327      ;
+; -2.290 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.327      ;
+; -2.258 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.294      ;
+; -2.258 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.294      ;
+; -2.258 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.294      ;
+; -2.258 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.294      ;
+; -2.258 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.294      ;
+; -2.254 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.290      ;
+; -2.254 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.290      ;
+; -2.254 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.290      ;
+; -2.254 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.290      ;
+; -2.254 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.290      ;
+; -2.249 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.286      ;
+; -2.249 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.286      ;
+; -2.249 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.286      ;
+; -2.249 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.286      ;
+; -2.249 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.286      ;
+; -2.249 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.286      ;
+; -2.245 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.282      ;
+; -2.245 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.282      ;
+; -2.245 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.282      ;
+; -2.245 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.282      ;
+; -2.245 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.282      ;
+; -2.245 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.282      ;
+; -2.242 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.277      ;
+; -2.242 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.277      ;
+; -2.242 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.277      ;
+; -2.242 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.277      ;
+; -2.242 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.277      ;
+; -2.233 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.269      ;
+; -2.233 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.269      ;
+; -2.233 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.269      ;
+; -2.233 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.269      ;
+; -2.233 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.269      ;
+; -2.233 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.269      ;
+; -2.212 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.247      ;
+; -2.212 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.247      ;
+; -2.212 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.247      ;
+; -2.212 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.247      ;
+; -2.212 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.247      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.204 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.241      ;
+; -2.203 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.239      ;
+; -2.203 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.239      ;
+; -2.203 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.239      ;
+; -2.203 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.239      ;
+; -2.203 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.239      ;
+; -2.203 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 3.239      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.183 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.001      ; 3.220      ;
+; -2.169 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.204      ;
+; -2.169 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.204      ;
+; -2.169 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.204      ;
+; -2.169 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.204      ;
+; -2.169 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.204      ;
++--------+-------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                                                     ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; debouncer:inst11|pstate.Wait            ; debouncer:inst11|pstate.Wait            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; debouncer:inst11|pstate.Hold            ; debouncer:inst11|pstate.Hold            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BitCounter:inst4|pcount[0]              ; BitCounter:inst4|pcount[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BitCounter:inst4|pcount[1]              ; BitCounter:inst4|pcount[1]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BitCounter:inst4|pcount[2]              ; BitCounter:inst4|pcount[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BitCounter:inst4|pcount[3]              ; BitCounter:inst4|pcount[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Controller:inst|pstate                  ; Controller:inst|pstate                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControllerReciever:inst1|pstate.Receive ; ControllerReciever:inst1|pstate.Receive ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControllerReciever:inst1|pstate.Half    ; ControllerReciever:inst1|pstate.Half    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BitCounter:inst12|pcount[0]             ; BitCounter:inst12|pcount[0]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BitCounter:inst12|pcount[1]             ; BitCounter:inst12|pcount[1]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BitCounter:inst12|pcount[2]             ; BitCounter:inst12|pcount[2]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; BitCounter:inst12|pcount[3]             ; BitCounter:inst12|pcount[3]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControllerReciever:inst1|pstate.Wait    ; ControllerReciever:inst1|pstate.Wait    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.519 ; ShiftReg:inst2|p_val[8]                 ; ShiftReg:inst2|p_val[7]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.524 ; ShiftReg:inst2|p_val[4]                 ; ShiftReg:inst2|p_val[3]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.790      ;
+; 0.530 ; BaudCounter:inst14|pcount[10]           ; BaudCounter:inst14|pcount[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.796      ;
+; 0.545 ; debouncer:inst11|pstate.Pulse           ; Controller:inst|pstate                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.811      ;
+; 0.551 ; BitCounter:inst4|pcount[0]              ; BitCounter:inst4|pcount[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.817      ;
+; 0.656 ; ShiftReg:inst2|p_val[5]                 ; ShiftReg:inst2|p_val[4]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.922      ;
+; 0.656 ; ShiftReg:inst2|p_val[2]                 ; ShiftReg:inst2|p_val[1]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.922      ;
+; 0.659 ; ShiftReg:inst2|p_val[3]                 ; ShiftReg:inst2|p_val[2]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.925      ;
+; 0.661 ; DeShiftReg:inst10|p_val[10]             ; DeShiftReg:inst10|p_val[9]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.927      ;
+; 0.796 ; ShiftReg:inst2|p_val[7]                 ; ShiftReg:inst2|p_val[6]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.062      ;
+; 0.801 ; BaudCounter:inst14|pcount[1]            ; BaudCounter:inst14|pcount[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.067      ;
+; 0.801 ; BaudCounter:inst13|pcount[9]            ; BaudCounter:inst13|pcount[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802 ; BaudCounter:inst14|pcount[6]            ; BaudCounter:inst14|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; BaudCounter:inst13|pcount[3]            ; BaudCounter:inst13|pcount[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; debouncer:inst11|pstate.Wait            ; debouncer:inst11|pstate.Hold            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.804 ; BaudCounter:inst14|pcount[0]            ; BaudCounter:inst14|pcount[0]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.070      ;
+; 0.805 ; BaudCounter:inst14|pcount[8]            ; BaudCounter:inst14|pcount[8]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805 ; BaudCounter:inst13|pcount[5]            ; BaudCounter:inst13|pcount[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.071      ;
+; 0.809 ; BaudCounter:inst5|pcount[6]             ; BaudCounter:inst5|pcount[6]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.075      ;
+; 0.809 ; BaudCounter:inst13|pcount[7]            ; BaudCounter:inst13|pcount[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.075      ;
+; 0.810 ; ControllerReciever:inst1|pstate.Receive ; ControllerReciever:inst1|pstate.Wait    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.812 ; BitCounter:inst12|pcount[0]             ; BitCounter:inst12|pcount[2]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.078      ;
+; 0.814 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[5]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.081      ;
+; 0.814 ; BitCounter:inst12|pcount[0]             ; BitCounter:inst12|pcount[1]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.815 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[6]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.082      ;
+; 0.831 ; ShiftReg:inst2|p_val[6]                 ; ShiftReg:inst2|p_val[5]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.097      ;
+; 0.835 ; BaudCounter:inst14|pcount[5]            ; BaudCounter:inst14|pcount[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; BaudCounter:inst14|pcount[4]            ; BaudCounter:inst14|pcount[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; ShiftReg:inst2|p_val[1]                 ; ShiftReg:inst2|p_val[0]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.101      ;
+; 0.837 ; BaudCounter:inst13|pcount[6]            ; BaudCounter:inst13|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.103      ;
+; 0.844 ; BaudCounter:inst5|pcount[3]             ; BaudCounter:inst5|pcount[3]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.110      ;
+; 0.845 ; BaudCounter:inst5|pcount[5]             ; BaudCounter:inst5|pcount[5]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.111      ;
+; 0.846 ; BaudCounter:inst5|pcount[7]             ; BaudCounter:inst5|pcount[7]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.850 ; DeShiftReg:inst10|p_val[2]              ; DeShiftReg:inst10|p_val[1]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.116      ;
+; 0.855 ; DeShiftReg:inst10|p_val[8]              ; DeShiftReg:inst10|p_val[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.121      ;
+; 0.858 ; DeShiftReg:inst10|p_val[9]              ; DeShiftReg:inst10|p_val[8]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.124      ;
+; 0.918 ; BaudCounter:inst13|pcount[10]           ; BaudCounter:inst13|pcount[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.184      ;
+; 0.937 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[0]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.204      ;
+; 0.941 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[8]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.208      ;
+; 0.948 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[6]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.215      ;
+; 0.950 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[5]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.217      ;
+; 0.978 ; BitCounter:inst4|pcount[2]              ; BitCounter:inst4|pcount[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.244      ;
+; 0.996 ; BitCounter:inst4|pcount[1]              ; BitCounter:inst4|pcount[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.262      ;
+; 1.014 ; ControllerReciever:inst1|Recieving      ; ControllerReciever:inst1|pstate.Wait    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.280      ;
+; 1.037 ; BaudCounter:inst5|pcount[9]             ; BaudCounter:inst5|pcount[9]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.303      ;
+; 1.044 ; BitCounter:inst12|pcount[1]             ; BitCounter:inst12|pcount[2]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.310      ;
+; 1.067 ; DeShiftReg:inst10|p_val[1]              ; DeShiftReg:inst10|p_val[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.333      ;
+; 1.075 ; debouncer:inst11|pstate.Hold            ; debouncer:inst11|pstate.Pulse           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.340      ;
+; 1.076 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[7]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.343      ;
+; 1.078 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[8]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.345      ;
+; 1.080 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[2]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.347      ;
+; 1.082 ; debouncer:inst11|pstate.Pulse           ; debouncer:inst11|pstate.Wait            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.349      ;
+; 1.082 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[0]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.349      ;
+; 1.086 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[3]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.353      ;
+; 1.086 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[1]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.353      ;
+; 1.087 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[4]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.354      ;
+; 1.088 ; DeShiftReg:inst10|p_val[7]              ; DeShiftReg:inst10|p_val[6]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.354      ;
+; 1.092 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[7]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.359      ;
+; 1.093 ; DeShiftReg:inst10|p_val[6]              ; DeShiftReg:inst10|p_val[5]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.359      ;
+; 1.098 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[3]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.365      ;
+; 1.109 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[2]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.376      ;
+; 1.110 ; BaudCounter:inst5|pcount[10]            ; BaudCounter:inst5|pcount[10]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.376      ;
+; 1.124 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[1]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.391      ;
+; 1.125 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[4]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.392      ;
+; 1.138 ; BaudCounter:inst5|pcount[1]             ; BitCounter:inst4|pcount[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.404      ;
+; 1.144 ; DeShiftReg:inst10|p_val[5]              ; DeShiftReg:inst10|p_val[4]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 1.409      ;
+; 1.186 ; ControllerReciever:inst1|pstate.Receive ; ControllerReciever:inst1|pstate.Half    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.452      ;
+; 1.187 ; BaudCounter:inst14|pcount[0]            ; BaudCounter:inst14|pcount[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.453      ;
+; 1.188 ; BaudCounter:inst13|pcount[5]            ; BaudCounter:inst13|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.454      ;
+; 1.192 ; BaudCounter:inst13|pcount[8]            ; BaudCounter:inst13|pcount[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.458      ;
+; 1.192 ; BaudCounter:inst5|pcount[6]             ; BaudCounter:inst5|pcount[7]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.458      ;
+; 1.197 ; BaudCounter:inst5|pcount[4]             ; BaudCounter:inst5|pcount[5]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.463      ;
+; 1.199 ; BaudCounter:inst5|pcount[4]             ; BaudCounter:inst5|pcount[8]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.465      ;
+; 1.199 ; BaudCounter:inst5|pcount[4]             ; BaudCounter:inst5|pcount[10]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.465      ;
+; 1.200 ; BaudCounter:inst5|pcount[4]             ; BaudCounter:inst5|pcount[4]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.466      ;
+; 1.219 ; BaudCounter:inst5|pcount[8]             ; BaudCounter:inst5|pcount[9]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.485      ;
+; 1.221 ; BaudCounter:inst14|pcount[5]            ; BaudCounter:inst14|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.487      ;
+; 1.221 ; BaudCounter:inst14|pcount[4]            ; BaudCounter:inst14|pcount[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.487      ;
+; 1.223 ; BaudCounter:inst13|pcount[6]            ; BaudCounter:inst13|pcount[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.489      ;
+; 1.225 ; BitCounter:inst4|pcount[0]              ; BitCounter:inst4|pcount[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.491      ;
+; 1.229 ; BaudCounter:inst14|pcount[9]            ; BaudCounter:inst14|pcount[2]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.495      ;
+; 1.231 ; BaudCounter:inst5|pcount[1]             ; BaudCounter:inst5|pcount[2]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.497      ;
+; 1.231 ; BaudCounter:inst5|pcount[5]             ; BaudCounter:inst5|pcount[6]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.497      ;
+; 1.231 ; BaudCounter:inst5|pcount[8]             ; BaudCounter:inst5|pcount[8]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.497      ;
+; 1.234 ; BaudCounter:inst5|pcount[1]             ; BaudCounter:inst5|pcount[1]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.500      ;
+; 1.234 ; BitCounter:inst4|pcount[0]              ; Controller:inst|pstate                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.500      ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'CLOCK_50'                                                                                                              ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -2.035 ; BaudCounter:inst14|pcount[3]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 3.070      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.932 ; BaudCounter:inst14|pcount[4]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.967      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.902 ; BaudCounter:inst14|pcount[6]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.937      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.859 ; BaudCounter:inst14|pcount[10] ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.894      ;
+; -1.853 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.889      ;
+; -1.853 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.889      ;
+; -1.853 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.889      ;
+; -1.853 ; BaudCounter:inst14|pcount[3]  ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.889      ;
+; -1.853 ; BaudCounter:inst14|pcount[3]  ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.889      ;
+; -1.853 ; BaudCounter:inst14|pcount[3]  ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.889      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.837 ; BaudCounter:inst14|pcount[5]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.872      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.755 ; BaudCounter:inst14|pcount[1]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.790      ;
+; -1.750 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.786      ;
+; -1.750 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.786      ;
+; -1.750 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.786      ;
+; -1.750 ; BaudCounter:inst14|pcount[4]  ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.786      ;
+; -1.750 ; BaudCounter:inst14|pcount[4]  ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.786      ;
+; -1.750 ; BaudCounter:inst14|pcount[4]  ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.786      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.722 ; BaudCounter:inst14|pcount[7]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.757      ;
+; -1.720 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.756      ;
+; -1.720 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.756      ;
+; -1.720 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.756      ;
+; -1.720 ; BaudCounter:inst14|pcount[6]  ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.756      ;
+; -1.720 ; BaudCounter:inst14|pcount[6]  ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.756      ;
+; -1.720 ; BaudCounter:inst14|pcount[6]  ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.756      ;
+; -1.677 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.713      ;
+; -1.677 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.713      ;
+; -1.677 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.713      ;
+; -1.677 ; BaudCounter:inst14|pcount[10] ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.713      ;
+; -1.677 ; BaudCounter:inst14|pcount[10] ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.713      ;
+; -1.677 ; BaudCounter:inst14|pcount[10] ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.713      ;
+; -1.655 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.691      ;
+; -1.655 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.691      ;
+; -1.655 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.691      ;
+; -1.655 ; BaudCounter:inst14|pcount[5]  ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.691      ;
+; -1.655 ; BaudCounter:inst14|pcount[5]  ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.691      ;
+; -1.655 ; BaudCounter:inst14|pcount[5]  ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 2.691      ;
+; -1.625 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.660      ;
+; -1.625 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.660      ;
+; -1.625 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.660      ;
+; -1.625 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.660      ;
+; -1.625 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.660      ;
+; -1.625 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.660      ;
+; -1.625 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.001     ; 2.660      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'CLOCK_50'                                                                                                                     ;
++-------+--------------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.642 ; debouncer:inst11|pstate.Pulse        ; BitCounter:inst4|pcount[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.908      ;
+; 1.642 ; debouncer:inst11|pstate.Pulse        ; BitCounter:inst4|pcount[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.908      ;
+; 1.642 ; debouncer:inst11|pstate.Pulse        ; BitCounter:inst4|pcount[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.908      ;
+; 1.642 ; debouncer:inst11|pstate.Pulse        ; BitCounter:inst4|pcount[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.908      ;
+; 1.642 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.908      ;
+; 1.642 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.908      ;
+; 1.642 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.908      ;
+; 1.657 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[5]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.923      ;
+; 1.657 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.923      ;
+; 1.657 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.923      ;
+; 1.657 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.923      ;
+; 1.657 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[9]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.923      ;
+; 1.657 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[10]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.923      ;
+; 1.657 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.923      ;
+; 1.657 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[4]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.923      ;
+; 1.756 ; Controller:inst|pstate               ; BitCounter:inst4|pcount[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.022      ;
+; 1.756 ; Controller:inst|pstate               ; BitCounter:inst4|pcount[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.022      ;
+; 1.756 ; Controller:inst|pstate               ; BitCounter:inst4|pcount[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.022      ;
+; 1.756 ; Controller:inst|pstate               ; BitCounter:inst4|pcount[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.022      ;
+; 1.756 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.022      ;
+; 1.756 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.022      ;
+; 1.756 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.022      ;
+; 1.771 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[5]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.037      ;
+; 1.771 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.037      ;
+; 1.771 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.037      ;
+; 1.771 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.037      ;
+; 1.771 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[9]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.037      ;
+; 1.771 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[10]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.037      ;
+; 1.771 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.037      ;
+; 1.771 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[4]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.037      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[8]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[7]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[6]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[5]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[4]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[3]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.835 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.102      ;
+; 1.856 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.123      ;
+; 1.856 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.123      ;
+; 1.856 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.123      ;
+; 1.856 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.123      ;
+; 1.857 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.124      ;
+; 1.857 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.124      ;
+; 1.857 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.124      ;
+; 1.857 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.124      ;
+; 1.857 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.124      ;
+; 1.857 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.124      ;
+; 1.857 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.124      ;
+; 1.981 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.248      ;
+; 1.981 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.248      ;
+; 1.981 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.248      ;
+; 1.981 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.248      ;
+; 1.982 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.249      ;
+; 1.982 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.249      ;
+; 1.982 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.249      ;
+; 1.982 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.249      ;
+; 1.982 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.249      ;
+; 1.982 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.249      ;
+; 1.982 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.249      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[8]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[7]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[6]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[5]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[4]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[3]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.041 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.308      ;
+; 2.064 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.330      ;
+; 2.064 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.330      ;
+; 2.064 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.330      ;
+; 2.064 ; BaudCounter:inst14|pcount[0]         ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.330      ;
+; 2.064 ; BaudCounter:inst14|pcount[0]         ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.330      ;
+; 2.064 ; BaudCounter:inst14|pcount[0]         ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.330      ;
+; 2.108 ; BaudCounter:inst14|pcount[2]         ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.374      ;
+; 2.108 ; BaudCounter:inst14|pcount[2]         ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.374      ;
+; 2.108 ; BaudCounter:inst14|pcount[2]         ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.374      ;
+; 2.108 ; BaudCounter:inst14|pcount[2]         ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.374      ;
+; 2.108 ; BaudCounter:inst14|pcount[2]         ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.374      ;
+; 2.108 ; BaudCounter:inst14|pcount[2]         ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.374      ;
+; 2.123 ; ControllerReciever:inst1|pstate.Half ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.390      ;
+; 2.123 ; ControllerReciever:inst1|pstate.Half ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.390      ;
+; 2.123 ; ControllerReciever:inst1|pstate.Half ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.390      ;
+; 2.123 ; ControllerReciever:inst1|pstate.Half ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.390      ;
+; 2.123 ; ControllerReciever:inst1|pstate.Half ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.390      ;
+; 2.123 ; ControllerReciever:inst1|pstate.Half ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.390      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[8]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[7]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[6]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[5]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[4]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[3]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.145 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 2.412      ;
+; 2.149 ; BaudCounter:inst14|pcount[9]         ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.415      ;
+; 2.149 ; BaudCounter:inst14|pcount[9]         ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.415      ;
+; 2.149 ; BaudCounter:inst14|pcount[9]         ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.415      ;
++-------+--------------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[10]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[10]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[8]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[8]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[9]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[9]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; Controller:inst|pstate                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; Controller:inst|pstate                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|Recieving      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|Recieving      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Half    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Half    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Receive ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Receive ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Wait    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Wait    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[10]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[10]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[2]              ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 5.337  ; 5.337  ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; 5.337  ; 5.337  ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 1.524  ; 1.524  ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; 0.781  ; 0.781  ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; -0.184 ; -0.184 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; -0.299 ; -0.299 ; Rise       ; CLOCK_50        ;
+;  SW[9]    ; CLOCK_50   ; -0.128 ; -0.128 ; Rise       ; CLOCK_50        ;
+;  SW[10]   ; CLOCK_50   ; 1.373  ; 1.373  ; Rise       ; CLOCK_50        ;
+;  SW[11]   ; CLOCK_50   ; 1.524  ; 1.524  ; Rise       ; CLOCK_50        ;
+;  SW[12]   ; CLOCK_50   ; 1.467  ; 1.467  ; Rise       ; CLOCK_50        ;
+; UART_RXD  ; CLOCK_50   ; 4.785  ; 4.785  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -4.293 ; -4.293 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; -4.293 ; -4.293 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 1.085  ; 1.085  ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; -0.154 ; -0.154 ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; 1.085  ; 1.085  ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; 0.929  ; 0.929  ; Rise       ; CLOCK_50        ;
+;  SW[9]    ; CLOCK_50   ; 1.061  ; 1.061  ; Rise       ; CLOCK_50        ;
+;  SW[10]   ; CLOCK_50   ; -0.579 ; -0.579 ; Rise       ; CLOCK_50        ;
+;  SW[11]   ; CLOCK_50   ; -0.589 ; -0.589 ; Rise       ; CLOCK_50        ;
+;  SW[12]   ; CLOCK_50   ; -0.393 ; -0.393 ; Rise       ; CLOCK_50        ;
+; UART_RXD  ; CLOCK_50   ; -4.555 ; -4.555 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 9.681 ; 9.681 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 9.670 ; 9.670 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 9.681 ; 9.681 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 9.674 ; 9.674 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 9.449 ; 9.449 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 9.420 ; 9.420 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 9.430 ; 9.430 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 9.433 ; 9.433 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 7.603 ; 7.603 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 7.603 ; 7.603 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 7.387 ; 7.387 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 7.249 ; 7.249 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 7.306 ; 7.306 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 7.283 ; 7.283 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 7.489 ; 7.489 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 7.571 ; 7.571 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 8.514 ; 8.514 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 7.742 ; 7.742 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 8.514 ; 8.514 ; Rise       ; CLOCK_50        ;
+; Uart_TxD  ; CLOCK_50   ; 8.145 ; 8.145 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 9.057 ; 9.057 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 9.337 ; 9.337 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 9.317 ; 9.317 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 9.316 ; 9.316 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 9.057 ; 9.057 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 9.074 ; 9.074 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 9.094 ; 9.094 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 9.075 ; 9.075 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 6.653 ; 6.653 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 7.573 ; 7.573 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 6.653 ; 6.653 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 7.199 ; 7.199 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 7.275 ; 7.275 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 7.251 ; 7.251 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 7.458 ; 7.458 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 7.539 ; 7.539 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 7.446 ; 7.446 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 7.446 ; 7.446 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 7.820 ; 7.820 ; Rise       ; CLOCK_50        ;
+; Uart_TxD  ; CLOCK_50   ; 8.145 ; 8.145 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------+
+; Fast Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -0.583 ; -15.067       ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
++-----------------------------------+
+; Fast Model Recovery Summary       ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -0.484 ; -10.326       ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Removal Summary       ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.845 ; 0.000         ;
++----------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; -1.380 ; -70.380            ;
++----------+--------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                                               ;
++--------+-------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.583 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.615      ;
+; -0.583 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.615      ;
+; -0.578 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.610      ;
+; -0.578 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.610      ;
+; -0.578 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.610      ;
+; -0.578 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.610      ;
+; -0.578 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.610      ;
+; -0.578 ; BaudCounter:inst14|pcount[3]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.610      ;
+; -0.569 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.601      ;
+; -0.569 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.601      ;
+; -0.569 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.601      ;
+; -0.569 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.601      ;
+; -0.569 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.601      ;
+; -0.568 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.600      ;
+; -0.568 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.600      ;
+; -0.568 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.600      ;
+; -0.568 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.600      ;
+; -0.568 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.600      ;
+; -0.564 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.596      ;
+; -0.564 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.596      ;
+; -0.564 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.596      ;
+; -0.564 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.596      ;
+; -0.564 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.596      ;
+; -0.564 ; BaudCounter:inst13|pcount[6]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.596      ;
+; -0.563 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.595      ;
+; -0.563 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.595      ;
+; -0.563 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.595      ;
+; -0.563 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.595      ;
+; -0.563 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.595      ;
+; -0.563 ; BaudCounter:inst13|pcount[8]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.595      ;
+; -0.558 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.590      ;
+; -0.558 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.590      ;
+; -0.558 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.590      ;
+; -0.558 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.590      ;
+; -0.558 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.590      ;
+; -0.553 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; BaudCounter:inst13|pcount[5]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.585      ;
+; -0.548 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.580      ;
+; -0.548 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.580      ;
+; -0.548 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.580      ;
+; -0.548 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.580      ;
+; -0.548 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.580      ;
+; -0.547 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.579      ;
+; -0.547 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.579      ;
+; -0.547 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.579      ;
+; -0.547 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.579      ;
+; -0.547 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.579      ;
+; -0.543 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.575      ;
+; -0.543 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.575      ;
+; -0.543 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.575      ;
+; -0.543 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.575      ;
+; -0.543 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.575      ;
+; -0.543 ; BaudCounter:inst13|pcount[7]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.575      ;
+; -0.542 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.574      ;
+; -0.542 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.574      ;
+; -0.542 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.574      ;
+; -0.542 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.574      ;
+; -0.542 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.574      ;
+; -0.542 ; BaudCounter:inst14|pcount[6]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.574      ;
+; -0.531 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.531 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.563      ;
+; -0.526 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[10] ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.526 ; BaudCounter:inst14|pcount[4]  ; DeShiftReg:inst10|p_val[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.558      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[5]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[4]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[3]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[2]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[1]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.508 ; BaudCounter:inst5|pcount[8]   ; ShiftReg:inst2|p_val[0]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.540      ;
+; -0.503 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[8]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.535      ;
+; -0.503 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[7]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.535      ;
+; -0.503 ; BaudCounter:inst5|pcount[10]  ; ShiftReg:inst2|p_val[6]     ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.535      ;
++--------+-------------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                                                     ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                               ; To Node                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; debouncer:inst11|pstate.Wait            ; debouncer:inst11|pstate.Wait            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; debouncer:inst11|pstate.Hold            ; debouncer:inst11|pstate.Hold            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BitCounter:inst4|pcount[0]              ; BitCounter:inst4|pcount[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BitCounter:inst4|pcount[1]              ; BitCounter:inst4|pcount[1]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BitCounter:inst4|pcount[2]              ; BitCounter:inst4|pcount[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BitCounter:inst4|pcount[3]              ; BitCounter:inst4|pcount[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Controller:inst|pstate                  ; Controller:inst|pstate                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControllerReciever:inst1|pstate.Receive ; ControllerReciever:inst1|pstate.Receive ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControllerReciever:inst1|pstate.Half    ; ControllerReciever:inst1|pstate.Half    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BitCounter:inst12|pcount[0]             ; BitCounter:inst12|pcount[0]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BitCounter:inst12|pcount[1]             ; BitCounter:inst12|pcount[1]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BitCounter:inst12|pcount[2]             ; BitCounter:inst12|pcount[2]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; BitCounter:inst12|pcount[3]             ; BitCounter:inst12|pcount[3]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControllerReciever:inst1|pstate.Wait    ; ControllerReciever:inst1|pstate.Wait    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238 ; ShiftReg:inst2|p_val[8]                 ; ShiftReg:inst2|p_val[7]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.390      ;
+; 0.242 ; ShiftReg:inst2|p_val[4]                 ; ShiftReg:inst2|p_val[3]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; BaudCounter:inst14|pcount[10]           ; BaudCounter:inst14|pcount[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.252 ; debouncer:inst11|pstate.Pulse           ; Controller:inst|pstate                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.404      ;
+; 0.257 ; BitCounter:inst4|pcount[0]              ; BitCounter:inst4|pcount[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.409      ;
+; 0.291 ; DeShiftReg:inst10|p_val[10]             ; DeShiftReg:inst10|p_val[9]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.443      ;
+; 0.293 ; ShiftReg:inst2|p_val[5]                 ; ShiftReg:inst2|p_val[4]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.445      ;
+; 0.295 ; ShiftReg:inst2|p_val[2]                 ; ShiftReg:inst2|p_val[1]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.447      ;
+; 0.297 ; ShiftReg:inst2|p_val[3]                 ; ShiftReg:inst2|p_val[2]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.449      ;
+; 0.358 ; BaudCounter:inst14|pcount[1]            ; BaudCounter:inst14|pcount[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; BaudCounter:inst14|pcount[6]            ; BaudCounter:inst14|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; BaudCounter:inst13|pcount[9]            ; BaudCounter:inst13|pcount[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; ShiftReg:inst2|p_val[7]                 ; ShiftReg:inst2|p_val[6]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; BaudCounter:inst14|pcount[0]            ; BaudCounter:inst14|pcount[0]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; BaudCounter:inst14|pcount[8]            ; BaudCounter:inst14|pcount[8]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; BaudCounter:inst13|pcount[3]            ; BaudCounter:inst13|pcount[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; BaudCounter:inst13|pcount[5]            ; BaudCounter:inst13|pcount[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; BaudCounter:inst13|pcount[7]            ; BaudCounter:inst13|pcount[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; debouncer:inst11|pstate.Wait            ; debouncer:inst11|pstate.Hold            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; BaudCounter:inst5|pcount[6]             ; BaudCounter:inst5|pcount[6]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.516      ;
+; 0.364 ; ControllerReciever:inst1|pstate.Receive ; ControllerReciever:inst1|pstate.Wait    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; BitCounter:inst12|pcount[0]             ; BitCounter:inst12|pcount[2]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.367 ; BitCounter:inst12|pcount[0]             ; BitCounter:inst12|pcount[1]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369 ; BaudCounter:inst14|pcount[5]            ; BaudCounter:inst14|pcount[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; BaudCounter:inst14|pcount[4]            ; BaudCounter:inst14|pcount[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; ShiftReg:inst2|p_val[6]                 ; ShiftReg:inst2|p_val[5]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.372 ; BaudCounter:inst13|pcount[6]            ; BaudCounter:inst13|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373 ; ShiftReg:inst2|p_val[1]                 ; ShiftReg:inst2|p_val[0]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.525      ;
+; 0.376 ; BaudCounter:inst5|pcount[3]             ; BaudCounter:inst5|pcount[3]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.378 ; BaudCounter:inst5|pcount[5]             ; BaudCounter:inst5|pcount[5]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; BaudCounter:inst5|pcount[7]             ; BaudCounter:inst5|pcount[7]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.384 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[6]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.536      ;
+; 0.385 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[5]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.537      ;
+; 0.404 ; BaudCounter:inst13|pcount[10]           ; BaudCounter:inst13|pcount[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.556      ;
+; 0.411 ; DeShiftReg:inst10|p_val[2]              ; DeShiftReg:inst10|p_val[1]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.563      ;
+; 0.414 ; DeShiftReg:inst10|p_val[8]              ; DeShiftReg:inst10|p_val[7]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.566      ;
+; 0.417 ; DeShiftReg:inst10|p_val[9]              ; DeShiftReg:inst10|p_val[8]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.569      ;
+; 0.431 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[0]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.583      ;
+; 0.437 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[8]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.589      ;
+; 0.439 ; BitCounter:inst4|pcount[2]              ; BitCounter:inst4|pcount[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.591      ;
+; 0.443 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[5]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.595      ;
+; 0.444 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[6]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.596      ;
+; 0.449 ; ControllerReciever:inst1|Recieving      ; ControllerReciever:inst1|pstate.Wait    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.601      ;
+; 0.450 ; BitCounter:inst4|pcount[1]              ; BitCounter:inst4|pcount[2]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.602      ;
+; 0.462 ; BaudCounter:inst5|pcount[9]             ; BaudCounter:inst5|pcount[9]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.614      ;
+; 0.468 ; BitCounter:inst12|pcount[1]             ; BitCounter:inst12|pcount[2]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.620      ;
+; 0.484 ; debouncer:inst11|pstate.Hold            ; debouncer:inst11|pstate.Pulse           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.636      ;
+; 0.491 ; BaudCounter:inst5|pcount[10]            ; BaudCounter:inst5|pcount[10]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.643      ;
+; 0.497 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[2]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497 ; BaudCounter:inst14|pcount[0]            ; BaudCounter:inst14|pcount[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.649      ;
+; 0.499 ; BaudCounter:inst13|pcount[5]            ; BaudCounter:inst13|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[7]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.652      ;
+; 0.500 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[0]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.652      ;
+; 0.502 ; debouncer:inst11|pstate.Pulse           ; debouncer:inst11|pstate.Wait            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.654      ;
+; 0.502 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[3]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.654      ;
+; 0.502 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[1]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.654      ;
+; 0.502 ; BaudCounter:inst13|pcount[8]            ; BaudCounter:inst13|pcount[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.654      ;
+; 0.502 ; BaudCounter:inst5|pcount[6]             ; BaudCounter:inst5|pcount[7]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.654      ;
+; 0.503 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[4]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.655      ;
+; 0.504 ; DeShiftReg:inst10|p_val[1]              ; DeShiftReg:inst10|p_val[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.656      ;
+; 0.504 ; debouncer:inst11|pstate.Pulse           ; ShiftReg:inst2|p_val[8]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.656      ;
+; 0.508 ; BaudCounter:inst5|pcount[4]             ; BaudCounter:inst5|pcount[5]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.660      ;
+; 0.509 ; BaudCounter:inst14|pcount[5]            ; BaudCounter:inst14|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; BaudCounter:inst14|pcount[4]            ; BaudCounter:inst14|pcount[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511 ; BaudCounter:inst5|pcount[8]             ; BaudCounter:inst5|pcount[9]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[2]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; BaudCounter:inst13|pcount[6]            ; BaudCounter:inst13|pcount[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.664      ;
+; 0.518 ; DeShiftReg:inst10|p_val[7]              ; DeShiftReg:inst10|p_val[6]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.670      ;
+; 0.518 ; BaudCounter:inst5|pcount[5]             ; BaudCounter:inst5|pcount[6]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.670      ;
+; 0.519 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[7]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.671      ;
+; 0.521 ; DeShiftReg:inst10|p_val[6]              ; DeShiftReg:inst10|p_val[5]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.673      ;
+; 0.522 ; BaudCounter:inst5|pcount[1]             ; BitCounter:inst4|pcount[0]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.674      ;
+; 0.523 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[1]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.675      ;
+; 0.524 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[3]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.676      ;
+; 0.524 ; Controller:inst|pstate                  ; ShiftReg:inst2|p_val[4]                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.676      ;
+; 0.533 ; BaudCounter:inst14|pcount[8]            ; BaudCounter:inst14|pcount[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534 ; BaudCounter:inst13|pcount[5]            ; BaudCounter:inst13|pcount[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.686      ;
+; 0.535 ; BaudCounter:inst13|pcount[7]            ; BaudCounter:inst13|pcount[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.687      ;
+; 0.538 ; BaudCounter:inst5|pcount[8]             ; BaudCounter:inst5|pcount[8]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.690      ;
+; 0.539 ; ControllerReciever:inst1|Recieving      ; ControllerReciever:inst1|pstate.Receive ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.691      ;
+; 0.541 ; ControllerReciever:inst1|pstate.Receive ; ControllerReciever:inst1|pstate.Half    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.693      ;
+; 0.543 ; BaudCounter:inst5|pcount[4]             ; BaudCounter:inst5|pcount[6]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.695      ;
+; 0.544 ; BaudCounter:inst5|pcount[4]             ; BaudCounter:inst5|pcount[4]             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; BaudCounter:inst14|pcount[4]            ; BaudCounter:inst14|pcount[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.696      ;
+; 0.546 ; BitCounter:inst4|pcount[0]              ; BitCounter:inst4|pcount[3]              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; ControllerReciever:inst1|Recieving      ; ControllerReciever:inst1|pstate.Half    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.699      ;
++-------+-----------------------------------------+-----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'CLOCK_50'                                                                                                              ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.484 ; BaudCounter:inst14|pcount[3]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.516      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.448 ; BaudCounter:inst14|pcount[6]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.480      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[10] ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.432 ; BaudCounter:inst14|pcount[4]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.464      ;
+; -0.406 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.438      ;
+; -0.406 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.438      ;
+; -0.406 ; BaudCounter:inst14|pcount[3]  ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.438      ;
+; -0.406 ; BaudCounter:inst14|pcount[3]  ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.438      ;
+; -0.406 ; BaudCounter:inst14|pcount[3]  ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.438      ;
+; -0.406 ; BaudCounter:inst14|pcount[3]  ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.438      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.385 ; BaudCounter:inst14|pcount[5]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.417      ;
+; -0.370 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.402      ;
+; -0.370 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.402      ;
+; -0.370 ; BaudCounter:inst14|pcount[6]  ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.402      ;
+; -0.370 ; BaudCounter:inst14|pcount[6]  ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.402      ;
+; -0.370 ; BaudCounter:inst14|pcount[6]  ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.402      ;
+; -0.370 ; BaudCounter:inst14|pcount[6]  ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.402      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.355 ; BaudCounter:inst14|pcount[1]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.387      ;
+; -0.354 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[10] ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[4]  ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[10] ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[4]  ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[10] ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[4]  ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[10] ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.354 ; BaudCounter:inst14|pcount[4]  ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.386      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.349 ; BaudCounter:inst14|pcount[7]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.381      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BaudCounter:inst13|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.308 ; BaudCounter:inst14|pcount[8]  ; BitCounter:inst12|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.340      ;
+; -0.307 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.339      ;
+; -0.307 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.339      ;
+; -0.307 ; BaudCounter:inst14|pcount[5]  ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.339      ;
+; -0.307 ; BaudCounter:inst14|pcount[5]  ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.000      ; 1.339      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'CLOCK_50'                                                                                                                     ;
++-------+--------------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.845 ; debouncer:inst11|pstate.Pulse        ; BitCounter:inst4|pcount[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.997      ;
+; 0.845 ; debouncer:inst11|pstate.Pulse        ; BitCounter:inst4|pcount[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.997      ;
+; 0.845 ; debouncer:inst11|pstate.Pulse        ; BitCounter:inst4|pcount[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.997      ;
+; 0.845 ; debouncer:inst11|pstate.Pulse        ; BitCounter:inst4|pcount[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.997      ;
+; 0.845 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.997      ;
+; 0.845 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.997      ;
+; 0.845 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.997      ;
+; 0.855 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[5]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.855 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.855 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.855 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.855 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[9]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.855 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[10]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.855 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.855 ; debouncer:inst11|pstate.Pulse        ; BaudCounter:inst5|pcount[4]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.882 ; Controller:inst|pstate               ; BitCounter:inst4|pcount[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.034      ;
+; 0.882 ; Controller:inst|pstate               ; BitCounter:inst4|pcount[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.034      ;
+; 0.882 ; Controller:inst|pstate               ; BitCounter:inst4|pcount[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.034      ;
+; 0.882 ; Controller:inst|pstate               ; BitCounter:inst4|pcount[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.034      ;
+; 0.882 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.034      ;
+; 0.882 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.034      ;
+; 0.882 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.034      ;
+; 0.892 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[5]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.044      ;
+; 0.892 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.044      ;
+; 0.892 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.044      ;
+; 0.892 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.044      ;
+; 0.892 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[9]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.044      ;
+; 0.892 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[10]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.044      ;
+; 0.892 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[3]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.044      ;
+; 0.892 ; Controller:inst|pstate               ; BaudCounter:inst5|pcount[4]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.044      ;
+; 0.935 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.088      ;
+; 0.935 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.088      ;
+; 0.935 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.088      ;
+; 0.935 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.088      ;
+; 0.938 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.091      ;
+; 0.938 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.091      ;
+; 0.938 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.091      ;
+; 0.938 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.091      ;
+; 0.938 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.091      ;
+; 0.938 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.091      ;
+; 0.938 ; ControllerReciever:inst1|Recieving   ; BaudCounter:inst14|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.091      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[8]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[7]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[6]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[5]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[4]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[3]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.965 ; Controller:inst|pstate               ; ShiftReg:inst2|p_val[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.984 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.137      ;
+; 0.984 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.137      ;
+; 0.984 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.137      ;
+; 0.984 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.137      ;
+; 0.987 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.140      ;
+; 0.987 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.140      ;
+; 0.987 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.140      ;
+; 0.987 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.140      ;
+; 0.987 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.140      ;
+; 0.987 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.140      ;
+; 0.987 ; ControllerReciever:inst1|pstate.Wait ; BaudCounter:inst14|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.140      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[8]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[7]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[6]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[5]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[4]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[3]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.011 ; BitCounter:inst4|pcount[0]           ; ShiftReg:inst2|p_val[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.163      ;
+; 1.024 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.176      ;
+; 1.024 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.176      ;
+; 1.024 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.176      ;
+; 1.024 ; BaudCounter:inst14|pcount[0]         ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.176      ;
+; 1.024 ; BaudCounter:inst14|pcount[0]         ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.176      ;
+; 1.024 ; BaudCounter:inst14|pcount[0]         ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.176      ;
+; 1.062 ; BaudCounter:inst14|pcount[2]         ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.214      ;
+; 1.062 ; BaudCounter:inst14|pcount[2]         ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.214      ;
+; 1.062 ; BaudCounter:inst14|pcount[2]         ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.214      ;
+; 1.062 ; BaudCounter:inst14|pcount[2]         ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.214      ;
+; 1.062 ; BaudCounter:inst14|pcount[2]         ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.214      ;
+; 1.062 ; BaudCounter:inst14|pcount[2]         ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.214      ;
+; 1.070 ; ControllerReciever:inst1|pstate.Half ; BaudCounter:inst13|pcount[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.223      ;
+; 1.070 ; ControllerReciever:inst1|pstate.Half ; BaudCounter:inst13|pcount[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.223      ;
+; 1.070 ; ControllerReciever:inst1|pstate.Half ; BaudCounter:inst13|pcount[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.223      ;
+; 1.070 ; ControllerReciever:inst1|pstate.Half ; BitCounter:inst12|pcount[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.223      ;
+; 1.070 ; ControllerReciever:inst1|pstate.Half ; BitCounter:inst12|pcount[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.223      ;
+; 1.070 ; ControllerReciever:inst1|pstate.Half ; BitCounter:inst12|pcount[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.223      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[8]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[7]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[6]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[5]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[4]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[3]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.072 ; BitCounter:inst4|pcount[3]           ; ShiftReg:inst2|p_val[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.224      ;
+; 1.102 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.254      ;
+; 1.102 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.254      ;
+; 1.102 ; BaudCounter:inst14|pcount[0]         ; BaudCounter:inst13|pcount[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.254      ;
++-------+--------------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                                  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst13|pcount[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[8]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst14|pcount[9]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[10]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[10]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[8]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[8]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[9]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BaudCounter:inst5|pcount[9]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst12|pcount[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; BitCounter:inst4|pcount[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; Controller:inst|pstate                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; Controller:inst|pstate                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|Recieving      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|Recieving      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Half    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Half    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Receive ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Receive ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Wait    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; ControllerReciever:inst1|pstate.Wait    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[10]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[10]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; DeShiftReg:inst10|p_val[2]              ;
++--------+--------------+----------------+------------------+----------+------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 2.849  ; 2.849  ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; 2.849  ; 2.849  ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 0.426  ; 0.426  ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; 0.098  ; 0.098  ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; -0.454 ; -0.454 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; -0.498 ; -0.498 ; Rise       ; CLOCK_50        ;
+;  SW[9]    ; CLOCK_50   ; -0.421 ; -0.421 ; Rise       ; CLOCK_50        ;
+;  SW[10]   ; CLOCK_50   ; 0.362  ; 0.362  ; Rise       ; CLOCK_50        ;
+;  SW[11]   ; CLOCK_50   ; 0.426  ; 0.426  ; Rise       ; CLOCK_50        ;
+;  SW[12]   ; CLOCK_50   ; 0.412  ; 0.412  ; Rise       ; CLOCK_50        ;
+; UART_RXD  ; CLOCK_50   ; 2.631  ; 2.631  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -2.357 ; -2.357 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; -2.357 ; -2.357 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 0.857  ; 0.857  ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; 0.186  ; 0.186  ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; 0.857  ; 0.857  ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; 0.784  ; 0.784  ; Rise       ; CLOCK_50        ;
+;  SW[9]    ; CLOCK_50   ; 0.835  ; 0.835  ; Rise       ; CLOCK_50        ;
+;  SW[10]   ; CLOCK_50   ; -0.014 ; -0.014 ; Rise       ; CLOCK_50        ;
+;  SW[11]   ; CLOCK_50   ; -0.011 ; -0.011 ; Rise       ; CLOCK_50        ;
+;  SW[12]   ; CLOCK_50   ; 0.069  ; 0.069  ; Rise       ; CLOCK_50        ;
+; UART_RXD  ; CLOCK_50   ; -2.511 ; -2.511 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 5.189 ; 5.189 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 5.189 ; 5.189 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 5.166 ; 5.166 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 5.172 ; 5.172 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 5.070 ; 5.070 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 5.073 ; 5.073 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 5.070 ; 5.070 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 5.057 ; 5.057 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 4.212 ; 4.212 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 4.212 ; 4.212 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 4.093 ; 4.093 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 4.007 ; 4.007 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 4.030 ; 4.030 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 4.046 ; 4.046 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 4.116 ; 4.116 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 4.161 ; 4.161 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.574 ; 4.574 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 4.264 ; 4.264 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 4.574 ; 4.574 ; Rise       ; CLOCK_50        ;
+; Uart_TxD  ; CLOCK_50   ; 4.417 ; 4.417 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 4.933 ; 4.933 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 5.066 ; 5.066 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 5.038 ; 5.038 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 5.042 ; 5.042 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 4.942 ; 4.942 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 4.934 ; 4.934 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 4.944 ; 4.944 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 4.933 ; 4.933 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 3.770 ; 3.770 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 4.173 ; 4.173 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 3.770 ; 3.770 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 3.973 ; 3.973 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 3.996 ; 3.996 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 3.992 ; 3.992 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 4.084 ; 4.084 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 4.129 ; 4.129 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.137 ; 4.137 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 4.137 ; 4.137 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 4.266 ; 4.266 ; Rise       ; CLOCK_50        ;
+; Uart_TxD  ; CLOCK_50   ; 4.417 ; 4.417 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.345   ; 0.215 ; -2.035   ; 0.845   ; -1.380              ;
+;  CLOCK_50        ; -2.345   ; 0.215 ; -2.035   ; 0.845   ; -1.380              ;
+; Design-wide TNS  ; -103.168 ; 0.0   ; -71.351  ; 0.0     ; -70.38              ;
+;  CLOCK_50        ; -103.168 ; 0.000 ; -71.351  ; 0.000   ; -70.380             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; 5.337  ; 5.337  ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; 5.337  ; 5.337  ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 1.524  ; 1.524  ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; 0.781  ; 0.781  ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; -0.184 ; -0.184 ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; -0.299 ; -0.299 ; Rise       ; CLOCK_50        ;
+;  SW[9]    ; CLOCK_50   ; -0.128 ; -0.128 ; Rise       ; CLOCK_50        ;
+;  SW[10]   ; CLOCK_50   ; 1.373  ; 1.373  ; Rise       ; CLOCK_50        ;
+;  SW[11]   ; CLOCK_50   ; 1.524  ; 1.524  ; Rise       ; CLOCK_50        ;
+;  SW[12]   ; CLOCK_50   ; 1.467  ; 1.467  ; Rise       ; CLOCK_50        ;
+; UART_RXD  ; CLOCK_50   ; 4.785  ; 4.785  ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_50   ; -2.357 ; -2.357 ; Rise       ; CLOCK_50        ;
+;  KEY[2]   ; CLOCK_50   ; -2.357 ; -2.357 ; Rise       ; CLOCK_50        ;
+; SW[*]     ; CLOCK_50   ; 1.085  ; 1.085  ; Rise       ; CLOCK_50        ;
+;  SW[6]    ; CLOCK_50   ; 0.186  ; 0.186  ; Rise       ; CLOCK_50        ;
+;  SW[7]    ; CLOCK_50   ; 1.085  ; 1.085  ; Rise       ; CLOCK_50        ;
+;  SW[8]    ; CLOCK_50   ; 0.929  ; 0.929  ; Rise       ; CLOCK_50        ;
+;  SW[9]    ; CLOCK_50   ; 1.061  ; 1.061  ; Rise       ; CLOCK_50        ;
+;  SW[10]   ; CLOCK_50   ; -0.014 ; -0.014 ; Rise       ; CLOCK_50        ;
+;  SW[11]   ; CLOCK_50   ; -0.011 ; -0.011 ; Rise       ; CLOCK_50        ;
+;  SW[12]   ; CLOCK_50   ; 0.069  ; 0.069  ; Rise       ; CLOCK_50        ;
+; UART_RXD  ; CLOCK_50   ; -2.511 ; -2.511 ; Rise       ; CLOCK_50        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 9.681 ; 9.681 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 9.670 ; 9.670 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 9.681 ; 9.681 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 9.674 ; 9.674 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 9.449 ; 9.449 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 9.420 ; 9.420 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 9.430 ; 9.430 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 9.433 ; 9.433 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 7.603 ; 7.603 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 7.603 ; 7.603 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 7.387 ; 7.387 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 7.249 ; 7.249 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 7.306 ; 7.306 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 7.283 ; 7.283 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 7.489 ; 7.489 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 7.571 ; 7.571 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 8.514 ; 8.514 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 7.742 ; 7.742 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 8.514 ; 8.514 ; Rise       ; CLOCK_50        ;
+; Uart_TxD  ; CLOCK_50   ; 8.145 ; 8.145 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_50   ; 4.933 ; 4.933 ; Rise       ; CLOCK_50        ;
+;  HEX0[0]  ; CLOCK_50   ; 5.066 ; 5.066 ; Rise       ; CLOCK_50        ;
+;  HEX0[1]  ; CLOCK_50   ; 5.038 ; 5.038 ; Rise       ; CLOCK_50        ;
+;  HEX0[2]  ; CLOCK_50   ; 5.042 ; 5.042 ; Rise       ; CLOCK_50        ;
+;  HEX0[3]  ; CLOCK_50   ; 4.942 ; 4.942 ; Rise       ; CLOCK_50        ;
+;  HEX0[4]  ; CLOCK_50   ; 4.934 ; 4.934 ; Rise       ; CLOCK_50        ;
+;  HEX0[5]  ; CLOCK_50   ; 4.944 ; 4.944 ; Rise       ; CLOCK_50        ;
+;  HEX0[6]  ; CLOCK_50   ; 4.933 ; 4.933 ; Rise       ; CLOCK_50        ;
+; HEX1[*]   ; CLOCK_50   ; 3.770 ; 3.770 ; Rise       ; CLOCK_50        ;
+;  HEX1[0]  ; CLOCK_50   ; 4.173 ; 4.173 ; Rise       ; CLOCK_50        ;
+;  HEX1[1]  ; CLOCK_50   ; 3.770 ; 3.770 ; Rise       ; CLOCK_50        ;
+;  HEX1[2]  ; CLOCK_50   ; 3.973 ; 3.973 ; Rise       ; CLOCK_50        ;
+;  HEX1[3]  ; CLOCK_50   ; 3.996 ; 3.996 ; Rise       ; CLOCK_50        ;
+;  HEX1[4]  ; CLOCK_50   ; 3.992 ; 3.992 ; Rise       ; CLOCK_50        ;
+;  HEX1[5]  ; CLOCK_50   ; 4.084 ; 4.084 ; Rise       ; CLOCK_50        ;
+;  HEX1[6]  ; CLOCK_50   ; 4.129 ; 4.129 ; Rise       ; CLOCK_50        ;
+; LEDG[*]   ; CLOCK_50   ; 4.137 ; 4.137 ; Rise       ; CLOCK_50        ;
+;  LEDG[6]  ; CLOCK_50   ; 4.137 ; 4.137 ; Rise       ; CLOCK_50        ;
+;  LEDG[7]  ; CLOCK_50   ; 4.266 ; 4.266 ; Rise       ; CLOCK_50        ;
+; Uart_TxD  ; CLOCK_50   ; 4.417 ; 4.417 ; Rise       ; CLOCK_50        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 956      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 956      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 277      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 277      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 37    ; 37   ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 61    ; 61   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Fri Nov 29 10:16:56 2019
+Info: Command: quartus_sta UART -c UART
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'UART.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.345
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.345      -103.168 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is -2.035
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.035       -71.351 CLOCK_50 
+Info (332146): Worst-case removal slack is 1.642
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.642         0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -70.380 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.583
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.583       -15.067 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is -0.484
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.484       -10.326 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.845
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.845         0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -70.380 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4608 megabytes
+    Info: Processing ended: Fri Nov 29 10:16:59 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+

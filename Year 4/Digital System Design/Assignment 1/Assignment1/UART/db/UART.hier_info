@@ -1,0 +1,415 @@
+|UART
+Uart_TxD <= ShiftReg:inst2.TxD
+CLOCK_50 => BaudCounter:inst5.clk
+CLOCK_50 => BitCounter:inst4.clk
+CLOCK_50 => debouncer:inst11.clk
+CLOCK_50 => Controller:inst.clk
+CLOCK_50 => ShiftReg:inst2.clk
+CLOCK_50 => ControllerReciever:inst1.clk
+CLOCK_50 => BaudCounter:inst13.clk
+CLOCK_50 => BaudCounter:inst14.clk
+CLOCK_50 => BitCounter:inst12.clk
+CLOCK_50 => DeShiftReg:inst10.clk
+KEY[2] => debouncer:inst11.switch
+KEY[3] => debouncer:inst11.reset_n
+KEY[3] => Controller:inst.reset_n
+KEY[3] => ControllerReciever:inst1.reset_n
+KEY[3] => DeShiftReg:inst10.reset_n
+SW[6] => Parity:inst3.Data[0]
+SW[7] => Parity:inst3.Data[1]
+SW[8] => Parity:inst3.Data[2]
+SW[9] => Parity:inst3.Data[3]
+SW[10] => Parity:inst3.Data[4]
+SW[11] => Parity:inst3.Data[5]
+SW[12] => Parity:inst3.Data[6]
+HEX0[6] <= Decode:inst9.HEX0[6]
+HEX0[5] <= Decode:inst9.HEX0[5]
+HEX0[4] <= Decode:inst9.HEX0[4]
+HEX0[3] <= Decode:inst9.HEX0[3]
+HEX0[2] <= Decode:inst9.HEX0[2]
+HEX0[1] <= Decode:inst9.HEX0[1]
+HEX0[0] <= Decode:inst9.HEX0[0]
+UART_RXD => ControllerReciever:inst1.RxD
+UART_RXD => DeShiftReg:inst10.RxD
+HEX1[6] <= Decode:inst8.HEX0[6]
+HEX1[5] <= Decode:inst8.HEX0[5]
+HEX1[4] <= Decode:inst8.HEX0[4]
+HEX1[3] <= Decode:inst8.HEX0[3]
+HEX1[2] <= Decode:inst8.HEX0[2]
+HEX1[1] <= Decode:inst8.HEX0[1]
+HEX1[0] <= Decode:inst8.HEX0[0]
+LEDG[6] <= ParityReciever:inst6.FramingError
+LEDG[7] <= ParityReciever:inst6.ParityError
+
+
+|UART|ShiftReg:inst2
+Data[0] => n_val[0].DATAB
+Data[1] => n_val[1].DATAB
+Data[2] => n_val[2].DATAB
+Data[3] => n_val[3].DATAB
+Data[4] => n_val[4].DATAB
+Data[5] => n_val[5].DATAB
+Data[6] => n_val[6].DATAB
+Data[7] => n_val[7].DATAB
+Data[8] => n_val[8].DATAB
+Data[9] => n_val[9].DATAB
+Data[10] => n_val[10].DATAB
+Load => n_val[10].OUTPUTSELECT
+Load => n_val[9].OUTPUTSELECT
+Load => n_val[8].OUTPUTSELECT
+Load => n_val[7].OUTPUTSELECT
+Load => n_val[6].OUTPUTSELECT
+Load => n_val[5].OUTPUTSELECT
+Load => n_val[4].OUTPUTSELECT
+Load => n_val[3].OUTPUTSELECT
+Load => n_val[2].OUTPUTSELECT
+Load => n_val[1].OUTPUTSELECT
+Load => n_val[0].OUTPUTSELECT
+Shift => n_val~0.OUTPUTSELECT
+Shift => n_val~1.OUTPUTSELECT
+Shift => n_val~2.OUTPUTSELECT
+Shift => n_val~3.OUTPUTSELECT
+Shift => n_val~4.OUTPUTSELECT
+Shift => n_val~5.OUTPUTSELECT
+Shift => n_val~6.OUTPUTSELECT
+Shift => n_val~7.OUTPUTSELECT
+Shift => n_val~8.OUTPUTSELECT
+Shift => n_val~9.OUTPUTSELECT
+Shift => n_val~10.OUTPUTSELECT
+TxD <= p_val[0].DB_MAX_OUTPUT_PORT_TYPE
+clk => p_val[0].CLK
+clk => p_val[1].CLK
+clk => p_val[2].CLK
+clk => p_val[3].CLK
+clk => p_val[4].CLK
+clk => p_val[5].CLK
+clk => p_val[6].CLK
+clk => p_val[7].CLK
+clk => p_val[8].CLK
+clk => p_val[9].CLK
+clk => p_val[10].CLK
+reset_n => p_val[0].PRESET
+reset_n => p_val[1].PRESET
+reset_n => p_val[2].PRESET
+reset_n => p_val[3].PRESET
+reset_n => p_val[4].PRESET
+reset_n => p_val[5].PRESET
+reset_n => p_val[6].PRESET
+reset_n => p_val[7].PRESET
+reset_n => p_val[8].PRESET
+reset_n => p_val[9].PRESET
+reset_n => p_val[10].PRESET
+
+
+|UART|Controller:inst
+clk => pstate.CLK
+reset_n => pstate.ACLR
+Send => nstate~0.OUTPUTSELECT
+Send => Load~0.DATAA
+Send => ResetBaud~0.DATAA
+Send => ResetBit~0.DATAA
+Baud => Shift~0.DATAB
+B_Done => nstate~1.OUTPUTSELECT
+B_Done => ResetShift~0.DATAB
+ResetBaud <= ResetBaud~0.DB_MAX_OUTPUT_PORT_TYPE
+ResetBit <= ResetBit~0.DB_MAX_OUTPUT_PORT_TYPE
+ResetShift <= ResetShift~0.DB_MAX_OUTPUT_PORT_TYPE
+Load <= Load~0.DB_MAX_OUTPUT_PORT_TYPE
+Shift <= Shift~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|BitCounter:inst4
+inc => pcount[3].ENA
+inc => pcount[2].ENA
+inc => pcount[1].ENA
+inc => pcount[0].ENA
+clk => pcount[0].CLK
+clk => pcount[1].CLK
+clk => pcount[2].CLK
+clk => pcount[3].CLK
+reset_n => pcount[0].ACLR
+reset_n => pcount[1].ACLR
+reset_n => pcount[2].ACLR
+reset_n => pcount[3].ACLR
+B_Done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|BaudCounter:inst5
+clk => pcount[0].CLK
+clk => pcount[1].CLK
+clk => pcount[2].CLK
+clk => pcount[3].CLK
+clk => pcount[4].CLK
+clk => pcount[5].CLK
+clk => pcount[6].CLK
+clk => pcount[7].CLK
+clk => pcount[8].CLK
+clk => pcount[9].CLK
+clk => pcount[10].CLK
+reset_n => pcount[0].ACLR
+reset_n => pcount[1].ACLR
+reset_n => pcount[2].ACLR
+reset_n => pcount[3].ACLR
+reset_n => pcount[4].ACLR
+reset_n => pcount[5].ACLR
+reset_n => pcount[6].ACLR
+reset_n => pcount[7].ACLR
+reset_n => pcount[8].ACLR
+reset_n => pcount[9].ACLR
+reset_n => pcount[10].ACLR
+Baud <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|debouncer:inst11
+switch => nstate~0.OUTPUTSELECT
+switch => nstate~1.OUTPUTSELECT
+switch => nstate~2.OUTPUTSELECT
+switch => nstate~3.OUTPUTSELECT
+switch => nstate~4.OUTPUTSELECT
+switch => nstate~5.OUTPUTSELECT
+Send <= Send~0.DB_MAX_OUTPUT_PORT_TYPE
+clk => pstate~5.DATAIN
+reset_n => pstate~9.DATAIN
+
+
+|UART|Parity:inst3
+Data[0] => WideXor0.IN0
+Data[0] => Dataout[1].DATAIN
+Data[1] => WideXor0.IN1
+Data[1] => Dataout[2].DATAIN
+Data[2] => WideXor0.IN2
+Data[2] => Dataout[3].DATAIN
+Data[3] => WideXor0.IN3
+Data[3] => Dataout[4].DATAIN
+Data[4] => WideXor0.IN4
+Data[4] => Dataout[5].DATAIN
+Data[5] => WideXor0.IN5
+Data[5] => Dataout[6].DATAIN
+Data[6] => WideXor0.IN6
+Data[6] => Dataout[7].DATAIN
+Dataout[0] <= <GND>
+Dataout[1] <= Data[0].DB_MAX_OUTPUT_PORT_TYPE
+Dataout[2] <= Data[1].DB_MAX_OUTPUT_PORT_TYPE
+Dataout[3] <= Data[2].DB_MAX_OUTPUT_PORT_TYPE
+Dataout[4] <= Data[3].DB_MAX_OUTPUT_PORT_TYPE
+Dataout[5] <= Data[4].DB_MAX_OUTPUT_PORT_TYPE
+Dataout[6] <= Data[5].DB_MAX_OUTPUT_PORT_TYPE
+Dataout[7] <= Data[6].DB_MAX_OUTPUT_PORT_TYPE
+Dataout[8] <= WideXor0.DB_MAX_OUTPUT_PORT_TYPE
+Dataout[9] <= <VCC>
+Dataout[10] <= <VCC>
+
+
+|UART|Decode:inst9
+SW[0] => Decoder0.IN3
+SW[1] => Decoder0.IN2
+SW[2] => Decoder0.IN1
+SW[3] => Decoder0.IN0
+HEX0[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|Splitter:inst7
+Data[0] => LeastSig[0].DATAIN
+Data[1] => LeastSig[1].DATAIN
+Data[2] => LeastSig[2].DATAIN
+Data[3] => LeastSig[3].DATAIN
+Data[4] => MostSig[0].DATAIN
+Data[5] => MostSig[1].DATAIN
+Data[6] => MostSig[2].DATAIN
+MostSig[0] <= Data[4].DB_MAX_OUTPUT_PORT_TYPE
+MostSig[1] <= Data[5].DB_MAX_OUTPUT_PORT_TYPE
+MostSig[2] <= Data[6].DB_MAX_OUTPUT_PORT_TYPE
+MostSig[3] <= <GND>
+LeastSig[0] <= Data[0].DB_MAX_OUTPUT_PORT_TYPE
+LeastSig[1] <= Data[1].DB_MAX_OUTPUT_PORT_TYPE
+LeastSig[2] <= Data[2].DB_MAX_OUTPUT_PORT_TYPE
+LeastSig[3] <= Data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|ParityReciever:inst6
+Data[0] => Equal0.IN2
+Data[1] => WideXor0.IN0
+Data[1] => OutData[0].DATAIN
+Data[2] => WideXor0.IN1
+Data[2] => OutData[1].DATAIN
+Data[3] => WideXor0.IN2
+Data[3] => OutData[2].DATAIN
+Data[4] => WideXor0.IN3
+Data[4] => OutData[3].DATAIN
+Data[5] => WideXor0.IN4
+Data[5] => OutData[4].DATAIN
+Data[6] => WideXor0.IN5
+Data[6] => OutData[5].DATAIN
+Data[7] => WideXor0.IN6
+Data[7] => OutData[6].DATAIN
+Data[8] => ParityError~0.IN1
+Data[9] => Equal0.IN1
+Data[10] => Equal0.IN0
+OutData[0] <= Data[1].DB_MAX_OUTPUT_PORT_TYPE
+OutData[1] <= Data[2].DB_MAX_OUTPUT_PORT_TYPE
+OutData[2] <= Data[3].DB_MAX_OUTPUT_PORT_TYPE
+OutData[3] <= Data[4].DB_MAX_OUTPUT_PORT_TYPE
+OutData[4] <= Data[5].DB_MAX_OUTPUT_PORT_TYPE
+OutData[5] <= Data[6].DB_MAX_OUTPUT_PORT_TYPE
+OutData[6] <= Data[7].DB_MAX_OUTPUT_PORT_TYPE
+ParityError <= ParityError~0.DB_MAX_OUTPUT_PORT_TYPE
+FramingError <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|DeShiftReg:inst10
+Data[0] <= p_val[0].DB_MAX_OUTPUT_PORT_TYPE
+Data[1] <= p_val[1].DB_MAX_OUTPUT_PORT_TYPE
+Data[2] <= p_val[2].DB_MAX_OUTPUT_PORT_TYPE
+Data[3] <= p_val[3].DB_MAX_OUTPUT_PORT_TYPE
+Data[4] <= p_val[4].DB_MAX_OUTPUT_PORT_TYPE
+Data[5] <= p_val[5].DB_MAX_OUTPUT_PORT_TYPE
+Data[6] <= p_val[6].DB_MAX_OUTPUT_PORT_TYPE
+Data[7] <= p_val[7].DB_MAX_OUTPUT_PORT_TYPE
+Data[8] <= p_val[8].DB_MAX_OUTPUT_PORT_TYPE
+Data[9] <= p_val[9].DB_MAX_OUTPUT_PORT_TYPE
+Data[10] <= p_val[10].DB_MAX_OUTPUT_PORT_TYPE
+Shift => p_val[0].ENA
+Shift => p_val[10].ENA
+Shift => p_val[9].ENA
+Shift => p_val[8].ENA
+Shift => p_val[7].ENA
+Shift => p_val[6].ENA
+Shift => p_val[5].ENA
+Shift => p_val[4].ENA
+Shift => p_val[3].ENA
+Shift => p_val[2].ENA
+Shift => p_val[1].ENA
+RxD => p_val[10].DATAIN
+clk => p_val[0].CLK
+clk => p_val[1].CLK
+clk => p_val[2].CLK
+clk => p_val[3].CLK
+clk => p_val[4].CLK
+clk => p_val[5].CLK
+clk => p_val[6].CLK
+clk => p_val[7].CLK
+clk => p_val[8].CLK
+clk => p_val[9].CLK
+clk => p_val[10].CLK
+reset_n => p_val[0].PRESET
+reset_n => p_val[1].PRESET
+reset_n => p_val[2].PRESET
+reset_n => p_val[3].PRESET
+reset_n => p_val[4].PRESET
+reset_n => p_val[5].PRESET
+reset_n => p_val[6].PRESET
+reset_n => p_val[7].PRESET
+reset_n => p_val[8].PRESET
+reset_n => p_val[9].PRESET
+reset_n => p_val[10].ACLR
+
+
+|UART|ControllerReciever:inst1
+clk => Recieving.CLK
+clk => pstate~5.DATAIN
+reset_n => pstate~9.DATAIN
+Baud => Selector3.IN1
+HalfBaud => nstate~3.OUTPUTSELECT
+HalfBaud => nstate~4.OUTPUTSELECT
+HalfBaud => nstate~5.OUTPUTSELECT
+HalfBaud => Selector3.IN2
+HalfBaud => ResetBaud~0.DATAB
+HalfBaud => ResetBitCount~0.DATAB
+B_Done => nstate~6.OUTPUTSELECT
+B_Done => nstate~7.OUTPUTSELECT
+B_Done => nstate~8.OUTPUTSELECT
+RxD => Recieving.PRESET
+Shift <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+ResetBaud <= ResetBaud~0.DB_MAX_OUTPUT_PORT_TYPE
+ResetHalfBaud <= ResetHalfBaud~0.DB_MAX_OUTPUT_PORT_TYPE
+ResetBitCount <= ResetBitCount~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|BaudCounter:inst13
+clk => pcount[0].CLK
+clk => pcount[1].CLK
+clk => pcount[2].CLK
+clk => pcount[3].CLK
+clk => pcount[4].CLK
+clk => pcount[5].CLK
+clk => pcount[6].CLK
+clk => pcount[7].CLK
+clk => pcount[8].CLK
+clk => pcount[9].CLK
+clk => pcount[10].CLK
+reset_n => pcount[0].ACLR
+reset_n => pcount[1].ACLR
+reset_n => pcount[2].ACLR
+reset_n => pcount[3].ACLR
+reset_n => pcount[4].ACLR
+reset_n => pcount[5].ACLR
+reset_n => pcount[6].ACLR
+reset_n => pcount[7].ACLR
+reset_n => pcount[8].ACLR
+reset_n => pcount[9].ACLR
+reset_n => pcount[10].ACLR
+Baud <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|BaudCounter:inst14
+clk => pcount[0].CLK
+clk => pcount[1].CLK
+clk => pcount[2].CLK
+clk => pcount[3].CLK
+clk => pcount[4].CLK
+clk => pcount[5].CLK
+clk => pcount[6].CLK
+clk => pcount[7].CLK
+clk => pcount[8].CLK
+clk => pcount[9].CLK
+clk => pcount[10].CLK
+reset_n => pcount[0].ACLR
+reset_n => pcount[1].ACLR
+reset_n => pcount[2].ACLR
+reset_n => pcount[3].ACLR
+reset_n => pcount[4].ACLR
+reset_n => pcount[5].ACLR
+reset_n => pcount[6].ACLR
+reset_n => pcount[7].ACLR
+reset_n => pcount[8].ACLR
+reset_n => pcount[9].ACLR
+reset_n => pcount[10].ACLR
+Baud <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|BitCounter:inst12
+inc => pcount[0].ENA
+inc => pcount[3].ENA
+inc => pcount[2].ENA
+inc => pcount[1].ENA
+clk => pcount[0].CLK
+clk => pcount[1].CLK
+clk => pcount[2].CLK
+clk => pcount[3].CLK
+reset_n => pcount[0].ACLR
+reset_n => pcount[1].ACLR
+reset_n => pcount[2].ACLR
+reset_n => pcount[3].ACLR
+B_Done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|Decode:inst8
+SW[0] => Decoder0.IN3
+SW[1] => Decoder0.IN2
+SW[2] => Decoder0.IN1
+SW[3] => Decoder0.IN0
+HEX0[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

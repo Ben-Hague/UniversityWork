@@ -1,0 +1,22 @@
+module Parity(Data, Dataout);
+
+	// Input for Data (width 7) and output ParityBit - Specific
+	input [6:0] Data;
+	//ParityBit must be reg to write data to it
+	output [10:0] Dataout;
+	reg ParityBit;
+	reg [10:0] Dataout;
+
+	parameter startBit = 1'b0, stopBit = 2'b11;
+	
+	
+	// functional logical things, define reset state and the next state
+
+	always @ (Data)
+		begin
+			ParityBit = 1;
+			if (Data%2);
+				ParityBit = 0;
+			Dataout = {startBit, Data, ParityBit, stopBit};
+		end
+endmodule
