@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addOn>
+  <identifier>e57ce1e5-4a80-11e4-9553-005056977bd0</identifier>
+  <displayType>Collection</displayType>
+  <translatedDisplayType>
+    <en_US>Collection</en_US>
+    <ja_JP>コレクション</ja_JP>
+    <ko_KR>컬렉션</ko_KR>
+    <zh_CN>集合</zh_CN>
+  </translatedDisplayType>
+  <name>Simulink Support for Kinect</name>
+  <author>Takashi Chikamasa</author>
+  <version>1.32.0.1</version>
+  <downloadUrl>https://www.mathworks.com/add-ons/downloads/file-exchange/e57ce1e5-4a80-11e4-9553-005056977bd0/?viewer=ml_desktop&amp;workflow=install</downloadUrl>
+  <previewImageUrl>http://www.mathworks.com/responsive_image/160/120/0/0/0/cache/add-ons/image/e5990ed79aadaf02d97b1939ba4d78ec.png</previewImageUrl>
+  <installationFolder>Collections</installationFolder>
+</addOn>
