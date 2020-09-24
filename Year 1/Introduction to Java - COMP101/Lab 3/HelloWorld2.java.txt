@@ -1,0 +1,27 @@
+// HELLO WORLD PROGRAM 2
+// Frans Coenen
+// Monday 15 January 1999
+// Revised Thursday 28 April 2005 for Java 5 
+// The University of Liverpool, UK
+
+// Import packages containing predefined classes
+
+import java.util.*;
+
+public class HelloWorld2 {
+    /** Main method  */
+
+    public static void main(String[] args) {
+       // Create instance of Scanner class
+       Scanner input = new Scanner(System.in);
+    	// Get input
+	System.out.print("What is your name? ");
+	String name1 = input.next();
+	String name2 = input.next();
+	
+	// Output
+	System.out.print("\nHello " + name1 + " " + name2);
+	System.out.println(" - Congratulations on writing your first" + 
+		" Java program which features some input!\n\n");
+        }
+    }

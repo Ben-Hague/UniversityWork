@@ -1,0 +1,18 @@
+/**
+ * Author: Clare Dixon
+ * The RectangleUser class implements an application that
+ * declares some rectangles and prints out some of their characteristics.
+ */
+public class RectangleUser {
+    // ---------------METHODS-------------
+    /*  Main Method */
+    public static void main(String[] args) {
+	Rectangle bigRect = new Rectangle(100,35);
+       System.out.println("The Big Rectangle's length is: "); 
+       System.out.println(bigRect.getLength()); // Prints length of the big rectangle
+       System.out.println("The Big Rectangle's width is: ");
+       System.out.println( bigRect.getWidth()); // Prints width of the big rectangle
+        System.out.println("The Big Rectangle's area is: ");
+       System.out.println( bigRect.calculateArea()); // Prints area of the big rectangle
+   }
+}

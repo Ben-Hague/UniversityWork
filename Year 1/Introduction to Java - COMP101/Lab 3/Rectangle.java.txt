@@ -1,0 +1,50 @@
+/**
+ * Author: Clare Dixon
+ * The Rectangle class implements an application that
+ * stores a rectangles length and width and calulates its area.
+ */
+public class Rectangle {
+    private int length;
+    private int width;
+    private static int nrectangles;
+
+    // ---------------METHODS-------------
+
+    // Constructor method
+    public Rectangle(int l, int w) {
+	length = l;
+	width = w;
+        nrectangles = nrectangles + 1;
+    }
+
+    public Rectangle() {
+        nrectangles = nrectangles + 1;
+    }
+
+    // Mutators
+    public void setLength(int l) {
+        length = l;
+    }
+
+    public void setWidth(int w) {
+        width = w;
+    }
+
+    // Accessors
+    public int getLength() {
+        return length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public static int getNrectangles() {
+        return nrectangles;
+    }
+
+    // Method that returns the area of the rectangle.
+    public  int calculateArea() {
+	return length * width;
+    }
+}

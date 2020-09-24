@@ -1,0 +1,30 @@
+// INTEGER INPUT
+// Frans Coenen
+// Thursday 31 July 2003
+// Revised Thursday 28 April 2005 for Java 5 
+// The University of Liverpool, UK
+
+// Import packages containing predefined classes
+
+import java.util.*;
+
+public class IntegerInputApp {
+    /* Main method  */
+
+    public static void main(String[] args) {	
+
+       // Create instance of Scanner class
+        Scanner input = new Scanner(System.in);
+
+	// Invite input	
+	System.out.print("Input two integers ");
+	
+	// Read in integer
+	int inputInt1 = input.nextInt(); 
+	int inputInt2 = input.nextInt(); 
+	
+	// Output the result
+	System.out.print("The values are ");
+	System.out.println(inputInt1 + " and " + inputInt2);
+	}
+    }

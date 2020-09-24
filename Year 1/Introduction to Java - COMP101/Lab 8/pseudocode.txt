@@ -1,0 +1,125 @@
+INT mark
+INT days
+INT passMark = 40
+
+FUNCTION setDays
+INPUT INT (X)
+OUTPUT VOID
+	days = X
+	END
+	
+FUNCTION setMark
+INPUT INT (X)
+OUTPUT VOID
+	mark = X
+	END
+	
+FUNCTION setPassMark
+INPUT INT (X)
+OUTPUT VOID
+	passMark = X
+	END
+
+FUNCTION inputBetween
+INPUT INT (min) INT (max)
+OUTPUT INT
+	INT value = min-1
+	WHILE value < min OR value > max
+		value = INT INPUT
+		IF value value < min OR value > max
+			OUTPUT The mark must be between min and max, enter a new value:
+		ELSE
+			BREAK
+		END LOOP
+	RETURN value
+
+CLASS schemeOne
+	INT lowerLimit = 20
+	INT marksLostPerDay = 5
+	
+	FUNCTION setLowerLimit
+	INPUT INT (X)
+	OUTPUT VOID
+		lowerLimit = X
+		END
+		
+	FUNCTION setMarksLostPerDay
+	INPUT INT (X)
+	OUTPUT VOID
+		marksLostPerDay = X
+		END
+		
+	FUNCTION getMarks
+	INPUT VOID
+	OUTPUT INT ARRAY
+		INT currentMark = mark
+		INT ARRAY markList
+		FOR day = 0; day <= days; day++
+			markList[day] = currentMark;
+			currentMark -= marksLostPerDay
+			IF currentMark < lowerLimit AND mark>lowerLimit
+				currentMark = lowerLimit
+			ELSE IF mark < lowerLimit
+				currentMark = mark
+		RETURN markList
+	
+	FUNCTION getDays
+	INPUT VOID
+	OUTPUT INT 
+		RETURN (mark-passMark)/marksLostPerDay
+	
+	FUNCTION printMarks
+	INPUT INT ARRAY (markList)
+	OUTPUT VOID
+		OUTPUT "day | mark"
+		FOR day = 0; day <= markList.length-1; day++
+			OUTPUT day | markList[day]
+
+CLASS schemeOne
+	INT lowerLimit = 25
+	INT percentageLostPerDay = 10
+	
+	FUNCTION setLowerLimit
+	INPUT INT (X)
+	OUTPUT VOID
+		lowerLimit = X
+		END
+		
+	FUNCTION setPercentageLostPerDay
+	INPUT INT (X)
+	OUTPUT VOID
+		percentageLostPerDay = X
+		END
+		
+	FUNCTION getMarks
+	INPUT VOID
+	OUTPUT DOUBLE ARRAY
+		DOUBLE currentMark = mark
+		DOUBLE ARRAY markList
+		FOR day = 0; day <= days; day++
+			markList[day] = currentMark;
+			currentMark = currentMark*(100-percentageLostPerDay)/100
+			IF currentMark < lowerLimit AND mark>lowerLimit
+				currentMark = lowerLimit
+			ELSE IF mark < lowerLimit
+				currentMark = mark
+		RETURN markList
+	
+	FUNCTION getDays
+	INPUT VOID
+	OUTPUT INT 
+		DOUBLE marksRemaining = mark
+		INT day = -1
+		WHILE marksRemaining > passMark
+			marksRemaining = marksRemaining*(100-percentageLostPerDay)/10
+			day ++
+			END loop
+		RETURN day
+	
+	FUNCTION printMarks
+	INPUT DOUBLE ARRAY (markList)
+	OUTPUT VOID
+		OUTPUT "day | mark"
+		FOR day = 0; day <= markList.length-1; day++
+			OUTPUT day | markList[day]
+		END 
