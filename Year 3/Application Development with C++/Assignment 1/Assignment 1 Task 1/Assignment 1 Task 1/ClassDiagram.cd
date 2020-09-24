@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Diode">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAAAAAQAAAA=</HashCode>
+      <FileName>Assignment 1 Task 1.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resistor">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assignment 1 Task 1.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VoltageSource">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAgACAAAAAAAAACAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assignment 1 Task 1.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circuit">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACAEAAAAAAAAAAAIAAEAAAAAAAAAIAAQAAAICAQEAA=</HashCode>
+      <FileName>Assignment 1 Task 1.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
