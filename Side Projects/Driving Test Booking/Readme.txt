@@ -1,0 +1,2 @@
+So I found I needed to book a Driving test ASAP,
+Included is a small script written with Selenium to automate the checking process and when one fits the criteria, to commit to holding the test for 15 min.
