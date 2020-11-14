@@ -1,0 +1,277 @@
+Binary Gap 
+Longest Sequence of zeros in a binary representation of an integer
+
+def solution(N):
+    # write your code in Python 3.6
+    longestString=0
+    currentString=0
+    for digit in bin(N)[2:]:
+        if digit=='0':
+            currentString+=1
+        else:
+            if (currentString>longestString):
+                longestString=currentString
+            currentString = 0
+    return longestString
+
+Rotate Array
+The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.
+check length of A
+
+def solution(A, K):
+    # write your code in Python 3.6
+    for i in range(0,K):
+        Result = [A[-1]] + A[0:-1] #maintain list datatype
+        A = Result
+    return A
+
+OddOccurrencesInArray
+Find pairs and return item not in a pair with the others.
+Slow ....
+
+def solution(A):
+    # write your code in Python 3.6
+    while(len(A)>1):
+        Val = A.pop(0)
+        if Val in A:
+            A.pop(A.index(Val))
+        else: return Val
+    return A[0]
+    pass
+	
+Model Solution: only works with single odd number however 2 exclusive ors cancel each other out 
+
+def solution(A):
+    missing_int = 0
+    for value in A:
+        missing_int ^= value
+    return missing_int
+FrogJump
+A small frog wants to get to the other side of the road. The frog is currently located at position X and wants to get to a position greater than or equal to Y. The small frog always jumps a fixed distance, D.
+
+Count the minimal number of jumps that the small frog must perform to reach its target.
+import math
+def solution(X, Y, D):
+    # write your code in Python 3.6
+    xy = Y-X;
+    if xy == 0: return 0
+    jumps = math.ceil(xy/D)
+    return jumps
+	
+	
+Find the missing number from 1-n+1 in a array of length n
+
+USE SUMS
+def solution(A):
+    # write your code in Python 3.6
+    return sum(range(1,len(A)+2)) - sum(A)
+	
+	
+	
+TapeEquilibrium
+
+A non-empty array A consisting of N integers is given. Array A represents numbers on a tape.
+def solution(A):
+    # write your code in Python 3.6
+    rSum=0
+    lSum=sum(A)
+    ans = 0xFFFFFFFF # MAX 32 bit number in hex
+    for i in A[:-1]:
+        rSum +=i
+        lSum -=i
+        cAns = abs(rSum-lSum)
+        if cAns<ans:
+            ans = cAns
+    return ans
+	
+Frog River One
+
+def solution(X, A):
+    # write your code in Python 3.6
+    if X == 0:
+        return 0
+    check = [0]*(X)
+    filled = 0
+    for i in range(0,len(A)):
+        if check[A[i]-1]==0:
+            check[A[i]-1] = 1
+            filled+=1
+            if filled == X:
+                return i
+    
+    return -1
+	
+#Dont check sums in these, it leads to inefficency, maintain counters
+
+MaxCounters
+
+the issue mainly here is the max command, it is more efficient to maintain our own max count than to calculate when needed
+
+def solution(N, A):
+    # write your code in Python 3.6
+    Counters =[0]*N
+    cMax = 0
+    if len(A) ==0:
+        return Counters
+        
+    for M in A:
+        if M==N+1:
+            Counters = [cMax]*N
+        else:
+            Counters[M-1]+=1
+            if Counters[M-1]>cMax: cMax=Counters[M-1]
+        
+    
+    return Counters
+	
+this times out on the largest test 
+it can be improved with this:
+
+def solution(N, A):
+    # write your code in Python 3.6
+    Counters =[0]*N
+    cMax = 0
+    lMax = 0
+    if len(A) ==0:
+        return Counters
+    for M in A:
+        if M==N+1:
+            lMax = cMax
+        else:
+            if Counters[M-1] < lMax:
+                Counters[M-1] = lMax+1
+            else:
+                Counters[M-1]+=1
+                
+            if Counters[M-1]>cMax: cMax=Counters[M-1]
+    for i in range(0,N):
+        if Counters[i]<lMax:
+            Counters[i] = lMax
+        
+    return Counters
+	
+Which reduces the number of writes to the "Counters" List
+
+MissingInteger
+
+def solution(A):
+    # write your code in Python 3.6
+    List = sorted(set(A))
+    currentValue=1
+    for X in List:
+        if X>0:
+            if X !=currentValue:
+                return currentValue
+            else: currentValue+=1
+    return currentValue
+	
+Reducing to set to remove duplicates then sorting makes the missing integer findable in O(n) which is much more efficent
+
+PermCheck
+
+def solution(A):
+    cMax = max(A)
+    if cMax != len(A):
+        return 0
+    if sorted(A) == list(range(1,cMax+1)):
+        return 1
+    else: return 0 
+	
+Start by checking length matches the max value of array Simple inexpensive check that speeds up the execution a good proportion of the time
+sort the array and compare to an ideal
+
+
+CountDiv
+
+def solution(A, B, K):
+    
+    minVal = ((A + K -1 ) // K) * K
+    
+    if minVal>B:
+        return 0;
+    
+    return (B - minVal)//K +1
+	
+	
+GeonomicRangeQuery
+Dont try and be clever !!!
+
+def solution(S, P, Q):
+    # write your code in Python 3.6
+    Results = [0]*len(P)
+    
+    for M in range(0,len(P)):
+        if P[M]<Q[M]:
+            Selection = S[P[M]:Q[M]+1]
+        else: 
+            Selection = S[P[M]]
+        
+        if 'A' in Selection:        
+            Results[M] = 1
+        else: 
+            if 'C' in Selection:
+                Results[M] = 2
+            else:
+                if 'G' in Selection:
+                    Results[M] = 3
+                else: 
+                    if 'T' in Selection:
+                        Results[M] = 4
+
+    return(Results)
+	
+Min Average 2 Slice
+
+def solution(A):
+    # write your ode in Python 3.6
+    CS = 0xffffffff
+    L = 0
+    for i in range(0,len(A)):
+        C2 = 0xffffffff
+        C3 = 0xffffffff
+        if i+1<len(A):
+            C2 = (A[i] + A[i+1])/2
+        if i+2<len(A):
+            C3 = (A[i]+A[i+1]+A[i+2])/3
+        if C2<C3:
+            if CS>C2:
+                CS=C2
+                L=i
+        else:
+            if CS>C3:
+                CS=C3
+                L=i
+    return L
+	
+	
+Passing Cars
+
+def solution(A):
+    totalWest = sum(A)
+    cars = 0;
+    for i in range(0,len(A)):
+        if A[i] == 1:
+            totalWest -=1
+        if A[i] == 0:
+            cars+= totalWest
+        if cars>1000000000:
+            return -1
+    return cars
+          
+
+Distinct elements in array	
+
+def solution(A):
+    # write your code in Python 3.6
+    return len(list(set(A)))	  
+	
+
+MaxProductOfThree
+
+def solution(A):
+    List = sorted(A)
+    Low = List[0]*List[1]*List[-1]
+    High = List[-1]*List[-2]*List[-3]
+    if Low>High:
+        return Low
+    return High
